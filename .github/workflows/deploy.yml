@@ -46,6 +46,8 @@ jobs:
 
           APP_DIR="/home/${{ secrets.EC2_USER }}/app"
           if [ ! -d "\$APP_DIR" ]; then
+            pwd
+            ls
             echo "App directory does not exist!"
             exit 1
           fi
