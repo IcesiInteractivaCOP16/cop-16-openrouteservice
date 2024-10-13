@@ -44,16 +44,15 @@ jobs:
         # Connect and run the verification and cleanup script
         ssh -i $PEM_FILE $EC2_USER@$EC2_HOST << 'EOF'
 
-          APP_DIR="/home/${{ secrets.EC2_USER }}/app"
-          if [ ! -d "\$APP_DIR" ]; then
+          APP_DIR="/home/ubuntu/app"
+          if [ ! -d "$APP_DIR" ]; then
             pwd
             ls
             echo "App directory does not exist!"
-            exit 1
           fi
 
           # Navigate to the app directory
-          cd "\$APP_DIR" || exit
+          cd $APP_DIR || exit
 
           # Check if the script exists before attempting to run it
           if [ -f "verify_and_cleanup.sh" ]; then
