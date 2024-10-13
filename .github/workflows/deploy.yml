@@ -64,5 +64,5 @@ jobs:
             exit 1
           fi
           # Run Docker Compose
-          docker-compose up -d --build
+          sudo docker-compose up -d --build
         EOF

@@ -16,6 +16,13 @@ install_docker_compose() {
   sudo chmod +x /usr/local/bin/docker-compose
 }
 
+# Function to add user to Docker group
+add_user_to_docker_group() {
+  echo "Adding user to Docker group..."
+  sudo usermod -aG docker $USER
+  echo "Please log out and log back in for the changes to take effect."
+}
+
 # Check if Docker is installed
 if ! [ -x "$(command -v docker)" ]; then
   echo "Docker is not installed. Attempting to install..."
@@ -30,6 +37,14 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   install_docker_compose
 else
   echo "Docker Compose is installed."
+fi
+
+# Check if the user is in the Docker group
+if ! groups $USER | grep -q "\bdocker\b"; then
+  echo "User $USER is not in the Docker group."
+  add_user_to_docker_group
+else
+  echo "User $USER is already in the Docker group."
 fi
 
 # Stop all running containers
