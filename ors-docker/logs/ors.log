@@ -1,0 +1,580 @@
+2024-10-13 10:33:42 INFO [o.h.o.a.Application                     ] - Starting Application v8.0.0 using Java 21.0.2 with PID 1 (/ors.jar started by root in /home/ors)
+2024-10-13 10:33:42 INFO [o.h.o.a.Application                     ] - The following 1 profile is active: "default"
+2024-10-13 10:33:42 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 10:33:42 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup started.
+2024-10-13 10:33:42 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration file set by environment variable.
+2024-10-13 10:33:42 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Loaded file '/home/ors/config/ors-config.yml'
+2024-10-13 10:33:42 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup finished.
+2024-10-13 10:33:42 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 10:33:44 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Initializing ORS...
+2024-10-13 10:33:44 INFO [o.h.o.r.RoutingProfileManager           ] - Total - 1024 MB, Free - 965.69 MB, Max: 2 GB, Used - 58.31 MB
+2024-10-13 10:33:44 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Initializing profiles from '/home/ors/files/example-heidelberg.osm.gz' (1 threads) ...
+2024-10-13 10:33:44 INFO [o.h.o.r.RoutingProfileManager           ] - 1 profile configurations submitted as tasks.
+2024-10-13 10:33:44 INFO [o.h.o.r.RoutingProfile                  ] - [1] Profiles: 'driving-car', location: '/home/ors/./graphs/car'.
+2024-10-13 10:33:44 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Loaded landmark splitting collection from 
+2024-10-13 10:33:44 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - version v4.9.1|2024-01-17T09:08:46Z (7,20,5,4,5,7)
+2024-10-13 10:33:44 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - graph CH|car_ors|RAM_STORE|3D|turn_cost|,,,,, details:edges:0(0MB), nodes:0(0MB), name:(0MB), geo:0(0MB), bounds:1.7976931348623157E308,-1.7976931348623157E308,1.7976931348623157E308,-1.7976931348623157E308,1.7976931348623157E308,-1.7976931348623157E308, shortcuts:0 (0MB), nodesCH:-1 (0MB), shortcuts:0 (0MB), nodesCH:-1 (0MB), shortcuts:0 (0MB), nodesCH:-1 (0MB)
+2024-10-13 10:33:45 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - No custom areas are used, custom_areas.directory not given
+2024-10-13 10:33:45 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - start creating graph from /home/ors/files/example-heidelberg.osm.gz
+2024-10-13 10:33:45 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - using CH|car_ors|RAM_STORE|3D|turn_cost|,,,,, memory:totalMB:1024, usedMB:269
+2024-10-13 10:33:45 INFO [o.h.o.a.Application                     ] - Started Application in 4.321 seconds (process running for 5.797)
+2024-10-13 10:33:45 INFO [o.h.o.a.Application                     ] - openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"}
+2024-10-13 10:34:20 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - call cleanUp for '/home/ors/./graphs/car' 
+2024-10-13 10:34:20 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - graph CH|car_ors|RAM_STORE|3D|turn_cost|7,20,5,4,5, details:edges:20 826(1MB), nodes:17 464(1MB), name:(2MB), geo:137 647(1MB), bounds:7.7084693,9.1039669,49.3325699,49.5168325,89.0,582.0, shortcuts:0 (1MB), nodesCH:-1 (1MB), shortcuts:0 (1MB), nodesCH:-1 (1MB), shortcuts:0 (1MB), nodesCH:-1 (1MB)
+2024-10-13 10:34:20 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - nodes: 17 464, edges: 20 826
+2024-10-13 10:34:20 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - Bridge interpolation 0s, tunnel interpolation 0s, ferry interpolation 0s
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.CorePreparationHandler    ] - Creating CH preparations, totalMB:1024, usedMB:102
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.CorePreparationHandler    ] - 1/2 calling CH prepare.doWork for profile 'car_ors_fastest_with_turn_costs' EDGE_BASED ... (totalMB:1024, usedMB:102)
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.CorePreparationHandler    ] - 2/2 calling CH prepare.doWork for profile 'car_ors_shortest_with_turn_costs' EDGE_BASED ... (totalMB:1024, usedMB:102)
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Creating Core graph, totalMB:1024, usedMB:103
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Building Core graph, totalMB:1024, usedMB:103
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Finished building Core graph, took: 0.060714353s, totalMB:1024, usedMB:123
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Building initial queue of nodes to be contracted: 17464 nodes, totalMB:1024, usedMB:140
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Finished building queue, took: 0.027585529s, totalMB:1024, usedMB:141
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:     16 179, shortcuts:          0, updates:  0, checked-nodes:          0, t(total):   0.15,  t(period):   0.03, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.12, dijkstra-ratio:   1.31%, meanDegree: 1.19, dijkstras:     55 775, mem:        0MB, totalMB:1024, usedMB:141
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:     15 406, shortcuts:          0, updates:  0, checked-nodes:        809, t(total):   0.16,  t(period):   0.03, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.12, dijkstra-ratio:   1.31%, meanDegree: 1.00, dijkstras:     55 783, mem:        0MB, totalMB:1024, usedMB:142
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:     14 630, shortcuts:          0, updates:  0, checked-nodes:      1 618, t(total):   0.16,  t(period):   0.03, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.13, dijkstra-ratio:   1.27%, meanDegree: 1.00, dijkstras:     55 783, mem:        0MB, totalMB:1024, usedMB:142
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:     13 870, shortcuts:          0, updates:  0, checked-nodes:      2 427, t(total):   0.17,  t(period):   0.03, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.13, dijkstra-ratio:   1.23%, meanDegree: 1.00, dijkstras:     55 783, mem:        0MB, totalMB:1024, usedMB:142
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:     13 127, shortcuts:          0, updates:  0, checked-nodes:      3 236, t(total):   0.17,  t(period):   0.03, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.13, dijkstra-ratio:   1.20%, meanDegree: 1.00, dijkstras:     55 783, mem:        0MB, totalMB:1024, usedMB:142
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:     12 371, shortcuts:          0, updates:  0, checked-nodes:      4 045, t(total):   0.17,  t(period):   0.03, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.13, dijkstra-ratio:   1.18%, meanDegree: 1.00, dijkstras:     55 783, mem:        0MB, totalMB:1024, usedMB:142
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:     11 646, shortcuts:          7, updates:  0, checked-nodes:      4 854, t(total):   0.19,  t(period):   0.03, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.02, t(other) :   0.13, dijkstra-ratio:   2.63%, meanDegree: 1.84, dijkstras:     56 866, mem:        0MB, totalMB:1024, usedMB:143
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:     10 957, shortcuts:         38, updates:  0, checked-nodes:      5 663, t(total):   0.20,  t(period):   0.03, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.02, t(other) :   0.13, dijkstra-ratio:   5.05%, meanDegree: 1.66, dijkstras:     59 148, mem:        0MB, totalMB:1024, usedMB:143
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:     10 332, shortcuts:         71, updates:  0, checked-nodes:      6 472, t(total):   0.21,  t(period):   0.03, t(lazy):   0.02, t(neighbor):   0.00, t(contr):   0.03, t(other) :   0.14, dijkstra-ratio:   6.63%, meanDegree: 1.61, dijkstras:     61 335, mem:        0MB, totalMB:1024, usedMB:143
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      9 739, shortcuts:        216, updates:  0, checked-nodes:      7 281, t(total):   0.22,  t(period):   0.03, t(lazy):   0.02, t(neighbor):   0.00, t(contr):   0.03, t(other) :   0.14, dijkstra-ratio:   8.54%, meanDegree: 2.00, dijkstras:     63 480, mem:        0MB, totalMB:1024, usedMB:143
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      9 113, shortcuts:        736, updates:  0, checked-nodes:      8 090, t(total):   0.23,  t(period):   0.03, t(lazy):   0.03, t(neighbor):   0.00, t(contr):   0.04, t(other) :   0.14, dijkstra-ratio:  10.66%, meanDegree: 0.73, dijkstras:     65 885, mem:        0MB, totalMB:1024, usedMB:144
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      8 597, shortcuts:        865, updates:  0, checked-nodes:      8 899, t(total):   0.24,  t(period):   0.03, t(lazy):   0.03, t(neighbor):   0.00, t(contr):   0.04, t(other) :   0.14, dijkstra-ratio:  10.75%, meanDegree: 1.00, dijkstras:     67 154, mem:        0MB, totalMB:1024, usedMB:144
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      8 118, shortcuts:      1 286, updates:  0, checked-nodes:      9 708, t(total):   0.25,  t(period):   0.03, t(lazy):   0.04, t(neighbor):   0.00, t(contr):   0.04, t(other) :   0.14, dijkstra-ratio:  11.59%, meanDegree: 1.10, dijkstras:     69 515, mem:        0MB, totalMB:1024, usedMB:144
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      7 564, shortcuts:      1 726, updates:  0, checked-nodes:     10 517, t(total):   0.26,  t(period):   0.03, t(lazy):   0.04, t(neighbor):   0.00, t(contr):   0.04, t(other) :   0.15, dijkstra-ratio:  13.16%, meanDegree: 0.00, dijkstras:     72 940, mem:        0MB, totalMB:1024, usedMB:145
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      6 857, shortcuts:      2 161, updates:  0, checked-nodes:     11 326, t(total):   0.26,  t(period):   0.03, t(lazy):   0.04, t(neighbor):   0.00, t(contr):   0.05, t(other) :   0.15, dijkstra-ratio:  13.62%, meanDegree: 2.76, dijkstras:     75 064, mem:        0MB, totalMB:1024, usedMB:145
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      6 174, shortcuts:      2 479, updates:  0, checked-nodes:     12 135, t(total):   0.28,  t(period):   0.03, t(lazy):   0.05, t(neighbor):   0.00, t(contr):   0.05, t(other) :   0.15, dijkstra-ratio:  15.04%, meanDegree: 2.47, dijkstras:     80 874, mem:        0MB, totalMB:1024, usedMB:145
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      5 496, shortcuts:      2 891, updates:  0, checked-nodes:     12 944, t(total):   0.29,  t(period):   0.03, t(lazy):   0.06, t(neighbor):   0.00, t(contr):   0.06, t(other) :   0.15, dijkstra-ratio:  16.37%, meanDegree: 2.54, dijkstras:     86 732, mem:        0MB, totalMB:1024, usedMB:146
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      4 828, shortcuts:      3 432, updates:  0, checked-nodes:     13 753, t(total):   0.31,  t(period):   0.03, t(lazy):   0.07, t(neighbor):   0.00, t(contr):   0.06, t(other) :   0.15, dijkstra-ratio:  17.70%, meanDegree: 2.47, dijkstras:     92 673, mem:        0MB, totalMB:1024, usedMB:146
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      4 132, shortcuts:      4 178, updates:  0, checked-nodes:     14 562, t(total):   0.32,  t(period):   0.03, t(lazy):   0.07, t(neighbor):   0.00, t(contr):   0.07, t(other) :   0.15, dijkstra-ratio:  18.72%, meanDegree: 2.67, dijkstras:     98 511, mem:        0MB, totalMB:1024, usedMB:146
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      3 468, shortcuts:      4 935, updates:  0, checked-nodes:     15 371, t(total):   0.33,  t(period):   0.03, t(lazy):   0.08, t(neighbor):   0.00, t(contr):   0.07, t(other) :   0.15, dijkstra-ratio:  20.03%, meanDegree: 2.06, dijkstras:    104 741, mem:        0MB, totalMB:1024, usedMB:147
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      2 784, shortcuts:      5 862, updates:  0, checked-nodes:     16 180, t(total):   0.35,  t(period):   0.03, t(lazy):   0.09, t(neighbor):   0.00, t(contr):   0.08, t(other) :   0.16, dijkstra-ratio:  21.14%, meanDegree: 2.77, dijkstras:    110 916, mem:        0MB, totalMB:1024, usedMB:147
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      2 090, shortcuts:      6 910, updates:  0, checked-nodes:     16 989, t(total):   0.36,  t(period):   0.03, t(lazy):   0.10, t(neighbor):   0.00, t(contr):   0.08, t(other) :   0.16, dijkstra-ratio:  22.07%, meanDegree: 2.46, dijkstras:    117 131, mem:        0MB, totalMB:1024, usedMB:148
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      1 555, shortcuts:      8 076, updates:  0, checked-nodes:     17 798, t(total):   0.38,  t(period):   0.03, t(lazy):   0.10, t(neighbor):   0.00, t(contr):   0.09, t(other) :   0.16, dijkstra-ratio:  23.01%, meanDegree: 3.07, dijkstras:    125 266, mem:        0MB, totalMB:1024, usedMB:148
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      1 003, shortcuts:      9 870, updates:  0, checked-nodes:     18 607, t(total):   0.40,  t(period):   0.03, t(lazy):   0.12, t(neighbor):   0.00, t(contr):   0.10, t(other) :   0.16, dijkstra-ratio:  24.50%, meanDegree: 2.01, dijkstras:    137 687, mem:        0MB, totalMB:1024, usedMB:148
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:        371, shortcuts:     11 925, updates:  0, checked-nodes:     19 416, t(total):   0.41,  t(period):   0.03, t(lazy):   0.13, t(neighbor):   0.00, t(contr):   0.10, t(other) :   0.16, dijkstra-ratio:  25.84%, meanDegree: 3.01, dijkstras:    152 329, mem:        0MB, totalMB:1024, usedMB:149
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:          0, shortcuts:     16 216, updates:  0, checked-nodes:     19 783, t(total):   0.43,  t(period):   0.03, t(lazy):   0.13, t(neighbor):   0.00, t(contr):   0.10, t(other) :   0.17, dijkstra-ratio:  26.57%, meanDegree: 5.05, dijkstras:    162 009, mem:        0MB, totalMB:1024, usedMB:150
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - new shortcuts: 16 216, initSize:16 179, limited_access|fastest|car_ors, periodic:0, lazy:100, neighbor:0, t(total):   0.43,  t(period):   0.03, t(lazy):   0.13, t(neighbor):   0.00, t(contr):   0.10, t(other) :   0.17, dijkstra-ratio:  26.50%, lazy-overhead: 22%, totalMB:1024, usedMB:150
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - shortcuts that exceed maximum weight: 0
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - took: 0s, graph now - num edges: 20 826, num nodes: 17 464, num shortcuts: 16 216
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Creating Core graph, totalMB:1024, usedMB:150
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Building Core graph, totalMB:1024, usedMB:150
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Finished building Core graph, took: 0.030394632s, totalMB:1024, usedMB:159
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Building initial queue of nodes to be contracted: 17464 nodes, totalMB:1024, usedMB:176
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Finished building queue, took: 0.013210982s, totalMB:1024, usedMB:177
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:     16 179, shortcuts:          0, updates:  0, checked-nodes:          0, t(total):   0.08,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.07, dijkstra-ratio:   2.27%, meanDegree: 1.19, dijkstras:     55 775, mem:        0MB, totalMB:1024, usedMB:177
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:     15 406, shortcuts:          0, updates:  0, checked-nodes:        809, t(total):   0.08,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.07, dijkstra-ratio:   2.27%, meanDegree: 1.00, dijkstras:     55 783, mem:        0MB, totalMB:1024, usedMB:177
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:     14 630, shortcuts:          0, updates:  0, checked-nodes:      1 618, t(total):   0.08,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.07, dijkstra-ratio:   2.22%, meanDegree: 1.00, dijkstras:     55 783, mem:        0MB, totalMB:1024, usedMB:177
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:     13 870, shortcuts:          0, updates:  0, checked-nodes:      2 427, t(total):   0.08,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.07, dijkstra-ratio:   2.17%, meanDegree: 1.00, dijkstras:     55 783, mem:        0MB, totalMB:1024, usedMB:177
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:     13 127, shortcuts:          0, updates:  0, checked-nodes:      3 236, t(total):   0.09,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.07, dijkstra-ratio:   2.13%, meanDegree: 1.00, dijkstras:     55 783, mem:        0MB, totalMB:1024, usedMB:178
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:     12 371, shortcuts:          0, updates:  0, checked-nodes:      4 045, t(total):   0.09,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.07, dijkstra-ratio:   2.08%, meanDegree: 1.00, dijkstras:     55 783, mem:        0MB, totalMB:1024, usedMB:178
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:     11 650, shortcuts:          6, updates:  0, checked-nodes:      4 854, t(total):   0.09,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.07, dijkstra-ratio:   3.72%, meanDegree: 1.44, dijkstras:     56 855, mem:        0MB, totalMB:1024, usedMB:178
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:     10 962, shortcuts:         36, updates:  0, checked-nodes:      5 663, t(total):   0.10,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.08, dijkstra-ratio:   6.06%, meanDegree: 1.99, dijkstras:     59 137, mem:        0MB, totalMB:1024, usedMB:178
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:     10 340, shortcuts:         66, updates:  0, checked-nodes:      6 472, t(total):   0.10,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.08, dijkstra-ratio:   8.41%, meanDegree: 1.82, dijkstras:     61 318, mem:        0MB, totalMB:1024, usedMB:179
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      9 750, shortcuts:        207, updates:  0, checked-nodes:      7 281, t(total):   0.11,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.08, dijkstra-ratio:  10.90%, meanDegree: 2.00, dijkstras:     63 463, mem:        0MB, totalMB:1024, usedMB:179
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      9 124, shortcuts:        735, updates:  0, checked-nodes:      8 090, t(total):   0.12,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.08, dijkstra-ratio:  13.67%, meanDegree: 0.40, dijkstras:     65 926, mem:        0MB, totalMB:1024, usedMB:179
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      8 599, shortcuts:        865, updates:  0, checked-nodes:      8 899, t(total):   0.12,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.08, dijkstra-ratio:  13.71%, meanDegree: 1.00, dijkstras:     67 179, mem:        0MB, totalMB:1024, usedMB:179
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      8 129, shortcuts:      1 279, updates:  0, checked-nodes:      9 708, t(total):   0.12,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.08, dijkstra-ratio:  14.45%, meanDegree: 1.17, dijkstras:     69 533, mem:        0MB, totalMB:1024, usedMB:180
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      7 585, shortcuts:      1 718, updates:  0, checked-nodes:     10 517, t(total):   0.13,  t(period):   0.01, t(lazy):   0.02, t(neighbor):   0.00, t(contr):   0.02, t(other) :   0.08, dijkstra-ratio:  15.98%, meanDegree: 0.22, dijkstras:     73 003, mem:        0MB, totalMB:1024, usedMB:180
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      6 877, shortcuts:      2 116, updates:  0, checked-nodes:     11 326, t(total):   0.13,  t(period):   0.01, t(lazy):   0.02, t(neighbor):   0.00, t(contr):   0.02, t(other) :   0.08, dijkstra-ratio:  16.68%, meanDegree: 2.62, dijkstras:     74 928, mem:        0MB, totalMB:1024, usedMB:180
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      6 186, shortcuts:      2 502, updates:  0, checked-nodes:     12 135, t(total):   0.14,  t(period):   0.01, t(lazy):   0.02, t(neighbor):   0.00, t(contr):   0.02, t(other) :   0.09, dijkstra-ratio:  19.94%, meanDegree: 2.30, dijkstras:     81 186, mem:        0MB, totalMB:1024, usedMB:180
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      5 505, shortcuts:      2 947, updates:  0, checked-nodes:     12 944, t(total):   0.15,  t(period):   0.01, t(lazy):   0.03, t(neighbor):   0.00, t(contr):   0.02, t(other) :   0.09, dijkstra-ratio:  22.81%, meanDegree: 2.28, dijkstras:     87 271, mem:        0MB, totalMB:1024, usedMB:181
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      4 847, shortcuts:      3 531, updates:  0, checked-nodes:     13 753, t(total):   0.16,  t(period):   0.01, t(lazy):   0.03, t(neighbor):   0.00, t(contr):   0.03, t(other) :   0.09, dijkstra-ratio:  25.00%, meanDegree: 2.03, dijkstras:     93 515, mem:        0MB, totalMB:1024, usedMB:181
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      4 154, shortcuts:      4 300, updates:  0, checked-nodes:     14 562, t(total):   0.17,  t(period):   0.01, t(lazy):   0.04, t(neighbor):   0.00, t(contr):   0.03, t(other) :   0.09, dijkstra-ratio:  26.74%, meanDegree: 2.36, dijkstras:     99 339, mem:        0MB, totalMB:1024, usedMB:182
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      3 496, shortcuts:      4 981, updates:  0, checked-nodes:     15 371, t(total):   0.18,  t(period):   0.01, t(lazy):   0.04, t(neighbor):   0.00, t(contr):   0.04, t(other) :   0.09, dijkstra-ratio:  28.95%, meanDegree: 2.23, dijkstras:    105 602, mem:        0MB, totalMB:1024, usedMB:182
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      2 810, shortcuts:      5 908, updates:  0, checked-nodes:     16 180, t(total):   0.19,  t(period):   0.01, t(lazy):   0.05, t(neighbor):   0.00, t(contr):   0.04, t(other) :   0.09, dijkstra-ratio:  30.87%, meanDegree: 2.73, dijkstras:    111 801, mem:        0MB, totalMB:1024, usedMB:182
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      2 132, shortcuts:      6 973, updates:  0, checked-nodes:     16 989, t(total):   0.21,  t(period):   0.01, t(lazy):   0.06, t(neighbor):   0.00, t(contr):   0.04, t(other) :   0.09, dijkstra-ratio:  32.62%, meanDegree: 2.20, dijkstras:    118 501, mem:        0MB, totalMB:1024, usedMB:183
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      1 572, shortcuts:      8 246, updates:  0, checked-nodes:     17 798, t(total):   0.23,  t(period):   0.01, t(lazy):   0.07, t(neighbor):   0.00, t(contr):   0.05, t(other) :   0.10, dijkstra-ratio:  36.00%, meanDegree: 2.97, dijkstras:    126 926, mem:        0MB, totalMB:1024, usedMB:183
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      1 052, shortcuts:     10 020, updates:  0, checked-nodes:     18 607, t(total):   0.26,  t(period):   0.01, t(lazy):   0.09, t(neighbor):   0.00, t(contr):   0.06, t(other) :   0.10, dijkstra-ratio:  40.91%, meanDegree: 3.37, dijkstras:    140 292, mem:        0MB, totalMB:1024, usedMB:184
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:        451, shortcuts:     11 985, updates:  0, checked-nodes:     19 416, t(total):   0.28,  t(period):   0.01, t(lazy):   0.10, t(neighbor):   0.00, t(contr):   0.07, t(other) :   0.10, dijkstra-ratio:  43.40%, meanDegree: 4.72, dijkstras:    156 455, mem:        0MB, totalMB:1024, usedMB:184
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:          0, shortcuts:     17 191, updates:  0, checked-nodes:     19 934, t(total):   0.31,  t(period):   0.01, t(lazy):   0.11, t(neighbor):   0.00, t(contr):   0.07, t(other) :   0.11, dijkstra-ratio:  44.74%, meanDegree: 5.68, dijkstras:    173 170, mem:        0MB, totalMB:1024, usedMB:185
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - new shortcuts: 17 191, initSize:16 179, limited_access|shortest|car_ors, periodic:0, lazy:100, neighbor:0, t(total):   0.31,  t(period):   0.01, t(lazy):   0.11, t(neighbor):   0.00, t(contr):   0.07, t(other) :   0.11, dijkstra-ratio:  44.51%, lazy-overhead: 23%, totalMB:1024, usedMB:185
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - shortcuts that exceed maximum weight: 0
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.PrepareCore               ] - took: 0s, graph now - num edges: 20 826, num nodes: 17 464, num shortcuts: 17 191
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.CorePreparationHandler    ] - Finished CH preparation, totalMB:1024, usedMB:185
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Creating LM preparations, totalMB:1024, usedMB:185
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_fastest_with_turn_costs_highways of size 1446
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_fastest_with_turn_costs_allow_all of size 1446
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_shortest_with_turn_costs_highways of size 1446
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_shortest_with_turn_costs_allow_all of size 1446
+2024-10-13 10:34:21 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - 1/4 calling LM prepare.doWork for limited_access|fastest|car_ors ... (totalMB:1024, usedMB:186)
+2024-10-13 10:34:22 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - LM car_ors_fastest_with_turn_costs_highways finished totalMB:1024, usedMB:616
+2024-10-13 10:34:22 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - 2/4 calling LM prepare.doWork for limited_access|fastest|car_ors ... (totalMB:1024, usedMB:616)
+2024-10-13 10:34:22 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - LM car_ors_fastest_with_turn_costs_allow_all finished totalMB:1024, usedMB:323
+2024-10-13 10:34:22 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - 3/4 calling LM prepare.doWork for limited_access|shortest|car_ors ... (totalMB:1024, usedMB:323)
+2024-10-13 10:34:23 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - LM car_ors_shortest_with_turn_costs_highways finished totalMB:1024, usedMB:686
+2024-10-13 10:34:23 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - 4/4 calling LM prepare.doWork for limited_access|shortest|car_ors ... (totalMB:1024, usedMB:686)
+2024-10-13 10:34:23 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - LM car_ors_shortest_with_turn_costs_allow_all finished totalMB:1024, usedMB:439
+2024-10-13 10:34:23 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Finished LM preparation, totalMB:1024, usedMB:439
+2024-10-13 10:34:23 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - flushing graph CH|car_ors|RAM_STORE|3D|turn_cost|7,20,5,4,5, details:edges:20 826(1MB), nodes:17 464(1MB), name:(2MB), geo:137 647(1MB), bounds:7.7084693,9.1039669,49.3325699,49.5168325,89.0,582.0, shortcuts:12 512 (1MB), nodesCH:17 464 (1MB), shortcuts:16 216 (1MB), nodesCH:17 464 (1MB), shortcuts:17 191 (1MB), nodesCH:17 464 (1MB), totalMB:1024, usedMB:439)
+2024-10-13 10:34:23 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - flushed graph totalMB:1024, usedMB:457)
+2024-10-13 10:34:23 INFO [o.h.o.r.RoutingProfile                  ] - [1] Edges: 20826 - Nodes: 17464.
+2024-10-13 10:34:23 INFO [o.h.o.r.RoutingProfile                  ] - [1] Total time: 39.234s.
+2024-10-13 10:34:23 INFO [o.h.o.r.RoutingProfile                  ] - [1] Finished at: 2024-10-13 10:34:23.
+2024-10-13 10:34:23 INFO [o.h.o.r.RoutingProfileManager           ] - Total time: 39.29s.
+2024-10-13 10:34:23 INFO [o.h.o.r.RoutingProfileManager           ] - ========================================================================
+2024-10-13 10:34:23 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Recycling garbage...
+2024-10-13 10:34:23 INFO [o.h.o.r.RoutingProfileManager           ] - Before: Total - 1024 MB, Free - 566.13 MB, Max: 2 GB, Used - 457.87 MB
+2024-10-13 10:34:23 INFO [o.h.o.r.RoutingProfileManager           ] - After: Total - 1024 MB, Free - 949.80 MB, Max: 2 GB, Used - 74.20 MB
+2024-10-13 10:34:23 INFO [o.h.o.r.RoutingProfileManager           ] - ========================================================================
+2024-10-13 10:34:23 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Memory usage by profiles:
+2024-10-13 10:34:23 INFO [o.h.o.r.RoutingProfileManager           ] - [1] 24.03 MB (32.4%)
+2024-10-13 10:34:23 INFO [o.h.o.r.RoutingProfileManager           ] - Total: 24.03 MB (32.4%)
+2024-10-13 10:34:23 INFO [o.h.o.r.RoutingProfileManager           ] - ========================================================================
+2024-10-13 10:41:24 INFO [o.h.o.a.Application                     ] - Starting Application v8.0.0 using Java 21.0.2 with PID 1 (/ors.jar started by root in /home/ors)
+2024-10-13 10:41:24 INFO [o.h.o.a.Application                     ] - The following 1 profile is active: "default"
+2024-10-13 10:41:24 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 10:41:24 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup started.
+2024-10-13 10:41:24 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration file set by environment variable.
+2024-10-13 10:41:24 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Loaded file '/home/ors/config/ors-config.yml'
+2024-10-13 10:41:24 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup finished.
+2024-10-13 10:41:24 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 10:41:26 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Initializing ORS...
+2024-10-13 10:41:26 INFO [o.h.o.r.RoutingProfileManager           ] - Total - 1024 MB, Free - 954.58 MB, Max: 2 GB, Used - 69.42 MB
+2024-10-13 10:41:26 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Initializing profiles from '/home/ors/files/example-heidelberg.osm.gz' (1 threads) ...
+2024-10-13 10:41:26 INFO [o.h.o.r.RoutingProfileManager           ] - 1 profile configurations submitted as tasks.
+2024-10-13 10:41:26 INFO [o.h.o.r.RoutingProfile                  ] - [1] Profiles: 'driving-car', location: '/home/ors/./graphs/car'.
+2024-10-13 10:41:27 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Loaded landmark splitting collection from 
+2024-10-13 10:41:27 INFO [o.h.o.r.g.e.c.CorePreparationHandler    ] - Creating CH preparations, totalMB:1024, usedMB:308
+2024-10-13 10:41:27 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Creating LM preparations, totalMB:1024, usedMB:310
+2024-10-13 10:41:27 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_fastest_with_turn_costs_highways of size 1446
+2024-10-13 10:41:27 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_fastest_with_turn_costs_allow_all of size 1446
+2024-10-13 10:41:27 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_shortest_with_turn_costs_highways of size 1446
+2024-10-13 10:41:27 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_shortest_with_turn_costs_allow_all of size 1446
+2024-10-13 10:41:27 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Finished LM preparation, totalMB:1024, usedMB:345
+2024-10-13 10:41:27 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - version v4.9.1|2024-01-17T09:08:46Z (7,20,5,4,5,7)
+2024-10-13 10:41:27 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - graph CH|car_ors|RAM_STORE|3D|turn_cost|7,20,5,4,5, details:edges:20 826(1MB), nodes:17 464(1MB), name:(2MB), geo:137 647(1MB), bounds:7.7084693,9.1039669,49.3325699,49.5168325,89.0,582.0, shortcuts:12 512 (1MB), nodesCH:17 464 (1MB), shortcuts:16 216 (1MB), nodesCH:17 464 (1MB), shortcuts:17 191 (1MB), nodesCH:17 464 (1MB)
+2024-10-13 10:41:27 INFO [o.h.o.r.RoutingProfile                  ] - [1] Edges: 20826 - Nodes: 17464.
+2024-10-13 10:41:27 INFO [o.h.o.r.RoutingProfile                  ] - [1] Total time: 1.031s.
+2024-10-13 10:41:27 INFO [o.h.o.r.RoutingProfile                  ] - [1] Finished at: 2024-10-13 10:41:27.
+2024-10-13 10:41:27 INFO [o.h.o.r.RoutingProfileManager           ] - Total time: 1.067s.
+2024-10-13 10:41:27 INFO [o.h.o.r.RoutingProfileManager           ] - ========================================================================
+2024-10-13 10:41:27 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Recycling garbage...
+2024-10-13 10:41:27 INFO [o.h.o.r.RoutingProfileManager           ] - Before: Total - 1024 MB, Free - 672.58 MB, Max: 2 GB, Used - 351.42 MB
+2024-10-13 10:41:27 INFO [o.h.o.r.RoutingProfileManager           ] - After: Total - 1024 MB, Free - 949.95 MB, Max: 2 GB, Used - 74.05 MB
+2024-10-13 10:41:27 INFO [o.h.o.r.RoutingProfileManager           ] - ========================================================================
+2024-10-13 10:41:27 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Memory usage by profiles:
+2024-10-13 10:41:27 INFO [o.h.o.r.RoutingProfileManager           ] - [1] 24.03 MB (32.2%)
+2024-10-13 10:41:27 INFO [o.h.o.r.RoutingProfileManager           ] - Total: 24.03 MB (32.2%)
+2024-10-13 10:41:27 INFO [o.h.o.r.RoutingProfileManager           ] - ========================================================================
+2024-10-13 10:41:28 INFO [o.h.o.a.Application                     ] - Started Application in 4.515 seconds (process running for 5.645)
+2024-10-13 10:41:28 INFO [o.h.o.a.Application                     ] - openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"}
+2024-10-13 10:44:26 INFO [o.h.o.a.Application                     ] - Starting Application v8.0.0 using Java 21.0.2 with PID 1 (/ors.jar started by root in /home/ors)
+2024-10-13 10:44:26 INFO [o.h.o.a.Application                     ] - The following 1 profile is active: "default"
+2024-10-13 10:44:26 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 10:44:26 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup started.
+2024-10-13 10:44:26 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration file set by environment variable.
+2024-10-13 10:44:26 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Loaded file '/home/ors/config/ors-config.yml'
+2024-10-13 10:44:26 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup finished.
+2024-10-13 10:44:26 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 10:44:28 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Initializing ORS...
+2024-10-13 10:44:28 INFO [o.h.o.r.RoutingProfileManager           ] - Total - 1024 MB, Free - 956.00 MB, Max: 2 GB, Used - 68.49 MB
+2024-10-13 10:44:28 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Initializing profiles from '/home/ors/files/example-heidelberg.osm.gz' (1 threads) ...
+2024-10-13 10:44:28 INFO [o.h.o.r.RoutingProfileManager           ] - 1 profile configurations submitted as tasks.
+2024-10-13 10:44:28 INFO [o.h.o.r.RoutingProfile                  ] - [1] Profiles: 'driving-car', location: '/home/ors/./graphs/car'.
+2024-10-13 10:44:29 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Loaded landmark splitting collection from 
+2024-10-13 10:44:29 INFO [o.h.o.r.g.e.c.CorePreparationHandler    ] - Creating CH preparations, totalMB:1024, usedMB:311
+2024-10-13 10:44:29 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Creating LM preparations, totalMB:1024, usedMB:313
+2024-10-13 10:44:29 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_fastest_with_turn_costs_highways of size 1446
+2024-10-13 10:44:29 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_fastest_with_turn_costs_allow_all of size 1446
+2024-10-13 10:44:29 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_shortest_with_turn_costs_highways of size 1446
+2024-10-13 10:44:29 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_shortest_with_turn_costs_allow_all of size 1446
+2024-10-13 10:44:29 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Finished LM preparation, totalMB:1024, usedMB:348
+2024-10-13 10:44:29 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - version v4.9.1|2024-01-17T09:08:46Z (7,20,5,4,5,7)
+2024-10-13 10:44:29 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - graph CH|car_ors|RAM_STORE|3D|turn_cost|7,20,5,4,5, details:edges:20 826(1MB), nodes:17 464(1MB), name:(2MB), geo:137 647(1MB), bounds:7.7084693,9.1039669,49.3325699,49.5168325,89.0,582.0, shortcuts:12 512 (1MB), nodesCH:17 464 (1MB), shortcuts:16 216 (1MB), nodesCH:17 464 (1MB), shortcuts:17 191 (1MB), nodesCH:17 464 (1MB)
+2024-10-13 10:44:29 INFO [o.h.o.r.RoutingProfile                  ] - [1] Edges: 20826 - Nodes: 17464.
+2024-10-13 10:44:29 INFO [o.h.o.r.RoutingProfile                  ] - [1] Total time: 1.094s.
+2024-10-13 10:44:29 INFO [o.h.o.r.RoutingProfile                  ] - [1] Finished at: 2024-10-13 10:44:29.
+2024-10-13 10:44:29 INFO [o.h.o.r.RoutingProfileManager           ] - Total time: 1.124s.
+2024-10-13 10:44:29 INFO [o.h.o.r.RoutingProfileManager           ] - ========================================================================
+2024-10-13 10:44:29 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Recycling garbage...
+2024-10-13 10:44:29 INFO [o.h.o.r.RoutingProfileManager           ] - Before: Total - 1024 MB, Free - 669.51 MB, Max: 2 GB, Used - 354.49 MB
+2024-10-13 10:44:30 INFO [o.h.o.r.RoutingProfileManager           ] - After: Total - 1024 MB, Free - 949.47 MB, Max: 2 GB, Used - 74.53 MB
+2024-10-13 10:44:30 INFO [o.h.o.r.RoutingProfileManager           ] - ========================================================================
+2024-10-13 10:44:30 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Memory usage by profiles:
+2024-10-13 10:44:30 INFO [o.h.o.r.RoutingProfileManager           ] - [1] 24.03 MB (32.2%)
+2024-10-13 10:44:30 INFO [o.h.o.r.RoutingProfileManager           ] - Total: 24.03 MB (32.2%)
+2024-10-13 10:44:30 INFO [o.h.o.r.RoutingProfileManager           ] - ========================================================================
+2024-10-13 10:44:30 INFO [o.h.o.a.Application                     ] - Started Application in 5.016 seconds (process running for 6.417)
+2024-10-13 10:44:30 INFO [o.h.o.a.Application                     ] - openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"}
+2024-10-13 10:46:56 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Shutting down openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"} and releasing resources.
+2024-10-13 10:47:04 INFO [o.h.o.a.Application                     ] - Starting Application v8.0.0 using Java 21.0.2 with PID 1 (/ors.jar started by root in /home/ors)
+2024-10-13 10:47:04 INFO [o.h.o.a.Application                     ] - The following 1 profile is active: "default"
+2024-10-13 10:47:04 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 10:47:04 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup started.
+2024-10-13 10:47:04 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration file set by environment variable.
+2024-10-13 10:47:04 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Loaded file '/home/ors/config/ors-config.yml'
+2024-10-13 10:47:04 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup finished.
+2024-10-13 10:47:04 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 10:47:06 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Initializing ORS...
+2024-10-13 10:47:06 INFO [o.h.o.r.RoutingProfileManager           ] - Total - 1024 MB, Free - 966.70 MB, Max: 2 GB, Used - 57.30 MB
+2024-10-13 10:47:06 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Initializing profiles from '/home/ors/files/example-heidelberg.osm.gz' (1 threads) ...
+2024-10-13 10:47:06 INFO [o.h.o.r.RoutingProfileManager           ] - 1 profile configurations submitted as tasks.
+2024-10-13 10:47:06 INFO [o.h.o.r.RoutingProfile                  ] - [1] Profiles: 'driving-car', location: '/home/ors/./graphs/car'.
+2024-10-13 10:47:07 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Loaded landmark splitting collection from 
+2024-10-13 10:47:07 INFO [o.h.o.r.g.e.c.CorePreparationHandler    ] - Creating CH preparations, totalMB:1024, usedMB:304
+2024-10-13 10:47:07 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Creating LM preparations, totalMB:1024, usedMB:307
+2024-10-13 10:47:07 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_fastest_with_turn_costs_highways of size 1446
+2024-10-13 10:47:07 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_fastest_with_turn_costs_allow_all of size 1446
+2024-10-13 10:47:07 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_shortest_with_turn_costs_highways of size 1446
+2024-10-13 10:47:07 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_shortest_with_turn_costs_allow_all of size 1446
+2024-10-13 10:47:08 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Finished LM preparation, totalMB:1024, usedMB:340
+2024-10-13 10:47:08 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - version v4.9.1|2024-01-17T09:08:46Z (7,20,5,4,5,7)
+2024-10-13 10:47:08 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - graph CH|car_ors|RAM_STORE|3D|turn_cost|7,20,5,4,5, details:edges:20 826(1MB), nodes:17 464(1MB), name:(2MB), geo:137 647(1MB), bounds:7.7084693,9.1039669,49.3325699,49.5168325,89.0,582.0, shortcuts:12 512 (1MB), nodesCH:17 464 (1MB), shortcuts:16 216 (1MB), nodesCH:17 464 (1MB), shortcuts:17 191 (1MB), nodesCH:17 464 (1MB)
+2024-10-13 10:47:08 INFO [o.h.o.r.RoutingProfile                  ] - [1] Edges: 20826 - Nodes: 17464.
+2024-10-13 10:47:08 INFO [o.h.o.r.RoutingProfile                  ] - [1] Total time: 1.153s.
+2024-10-13 10:47:08 INFO [o.h.o.r.RoutingProfile                  ] - [1] Finished at: 2024-10-13 10:47:08.
+2024-10-13 10:47:08 INFO [o.h.o.r.RoutingProfileManager           ] - Total time: 1.193s.
+2024-10-13 10:47:08 INFO [o.h.o.r.RoutingProfileManager           ] - ========================================================================
+2024-10-13 10:47:08 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Recycling garbage...
+2024-10-13 10:47:08 INFO [o.h.o.r.RoutingProfileManager           ] - Before: Total - 1024 MB, Free - 677.21 MB, Max: 2 GB, Used - 346.79 MB
+2024-10-13 10:47:08 INFO [o.h.o.r.RoutingProfileManager           ] - After: Total - 1024 MB, Free - 949.97 MB, Max: 2 GB, Used - 74.03 MB
+2024-10-13 10:47:08 INFO [o.h.o.r.RoutingProfileManager           ] - ========================================================================
+2024-10-13 10:47:08 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Memory usage by profiles:
+2024-10-13 10:47:08 INFO [o.h.o.r.RoutingProfileManager           ] - [1] 24.03 MB (31.8%)
+2024-10-13 10:47:08 INFO [o.h.o.r.RoutingProfileManager           ] - Total: 24.03 MB (31.8%)
+2024-10-13 10:47:08 INFO [o.h.o.r.RoutingProfileManager           ] - ========================================================================
+2024-10-13 10:47:08 INFO [o.h.o.a.Application                     ] - Started Application in 4.835 seconds (process running for 6.425)
+2024-10-13 10:47:08 INFO [o.h.o.a.Application                     ] - openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"}
+2024-10-13 19:49:32 INFO [o.h.o.a.Application                     ] - Starting Application v8.0.0 using Java 21.0.2 with PID 1 (/ors.jar started by root in /home/ors)
+2024-10-13 19:49:32 INFO [o.h.o.a.Application                     ] - The following 1 profile is active: "default"
+2024-10-13 19:49:32 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 19:49:32 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup started.
+2024-10-13 19:49:32 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration file set by environment variable.
+2024-10-13 19:49:32 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Loaded file '/home/ors/config/ors-config.yml'
+2024-10-13 19:49:32 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup finished.
+2024-10-13 19:49:32 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 19:49:35 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Initializing ORS...
+2024-10-13 19:49:35 INFO [o.h.o.r.RoutingProfileManager           ] - Total - 1024 MB, Free - 965.28 MB, Max: 2 GB, Used - 58.72 MB
+2024-10-13 19:49:35 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Initializing profiles from '/home/ors/osm_files' (1 threads) ...
+2024-10-13 19:49:35 INFO [o.h.o.r.RoutingProfileManager           ] - 1 profile configurations submitted as tasks.
+2024-10-13 19:49:35 INFO [o.h.o.r.RoutingProfile                  ] - [1] Profiles: 'driving-car', location: '/home/ors/./graphs/car'.
+2024-10-13 19:49:36 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Loaded landmark splitting collection from 
+2024-10-13 19:49:36 INFO [o.h.o.a.Application                     ] - Started Application in 5.639 seconds (process running for 7.05)
+2024-10-13 19:49:36 INFO [o.h.o.a.Application                     ] - openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"}
+2024-10-13 19:49:37 INFO [o.h.o.r.g.e.c.CorePreparationHandler    ] - Creating CH preparations, totalMB:1024, usedMB:341
+2024-10-13 19:49:37 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Creating LM preparations, totalMB:1024, usedMB:342
+2024-10-13 19:49:37 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_fastest_with_turn_costs_highways of size 1446
+2024-10-13 19:49:37 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_fastest_with_turn_costs_allow_all of size 1446
+2024-10-13 19:49:37 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_shortest_with_turn_costs_highways of size 1446
+2024-10-13 19:49:37 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_shortest_with_turn_costs_allow_all of size 1446
+2024-10-13 19:49:37 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Finished LM preparation, totalMB:1024, usedMB:359
+2024-10-13 19:49:37 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - version v4.9.1|2024-01-17T09:08:46Z (7,20,5,4,5,7)
+2024-10-13 19:49:37 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - graph CH|car_ors|RAM_STORE|3D|turn_cost|7,20,5,4,5, details:edges:20 826(1MB), nodes:17 464(1MB), name:(2MB), geo:137 647(1MB), bounds:7.7084693,9.1039669,49.3325699,49.5168325,89.0,582.0, shortcuts:12 512 (1MB), nodesCH:17 464 (1MB), shortcuts:16 216 (1MB), nodesCH:17 464 (1MB), shortcuts:17 191 (1MB), nodesCH:17 464 (1MB)
+2024-10-13 19:49:37 INFO [o.h.o.r.RoutingProfile                  ] - [1] Edges: 20826 - Nodes: 17464.
+2024-10-13 19:49:37 INFO [o.h.o.r.RoutingProfile                  ] - [1] Total time: 1.734s.
+2024-10-13 19:49:37 INFO [o.h.o.r.RoutingProfile                  ] - [1] Finished at: 2024-10-13 19:49:37.
+2024-10-13 19:49:37 INFO [o.h.o.r.RoutingProfileManager           ] - Total time: 1.775s.
+2024-10-13 19:49:37 INFO [o.h.o.r.RoutingProfileManager           ] - ========================================================================
+2024-10-13 19:49:37 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Recycling garbage...
+2024-10-13 19:49:37 INFO [o.h.o.r.RoutingProfileManager           ] - Before: Total - 1024 MB, Free - 662.78 MB, Max: 2 GB, Used - 361.22 MB
+2024-10-13 19:49:37 INFO [o.h.o.r.RoutingProfileManager           ] - After: Total - 1024 MB, Free - 952.02 MB, Max: 2 GB, Used - 71.98 MB
+2024-10-13 19:49:37 INFO [o.h.o.r.RoutingProfileManager           ] - ========================================================================
+2024-10-13 19:49:37 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Memory usage by profiles:
+2024-10-13 19:49:37 INFO [o.h.o.r.RoutingProfileManager           ] - [1] 24.03 MB (33.4%)
+2024-10-13 19:49:37 INFO [o.h.o.r.RoutingProfileManager           ] - Total: 24.03 MB (33.4%)
+2024-10-13 19:49:37 INFO [o.h.o.r.RoutingProfileManager           ] - ========================================================================
+2024-10-13 19:58:43 INFO [o.h.o.a.Application                     ] - Starting Application v8.0.0 using Java 21.0.2 with PID 1 (/ors.jar started by root in /home/ors)
+2024-10-13 19:58:43 INFO [o.h.o.a.Application                     ] - The following 1 profile is active: "default"
+2024-10-13 19:58:43 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 19:58:43 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup started.
+2024-10-13 19:58:43 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration file set by environment variable.
+2024-10-13 19:58:43 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Loaded file '/home/ors/config/ors-config.yml'
+2024-10-13 19:58:43 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup finished.
+2024-10-13 19:58:43 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 19:58:46 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Initializing ORS...
+2024-10-13 19:58:46 INFO [o.h.o.r.RoutingProfileManager           ] - Total - 1024 MB, Free - 955.99 MB, Max: 2 GB, Used - 68.01 MB
+2024-10-13 19:58:46 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Initializing profiles from '/home/ors/files' (1 threads) ...
+2024-10-13 19:58:46 INFO [o.h.o.r.RoutingProfileManager           ] - 1 profile configurations submitted as tasks.
+2024-10-13 19:58:46 INFO [o.h.o.r.RoutingProfile                  ] - [1] Profiles: 'driving-car', location: '/home/ors/./graphs/car'.
+2024-10-13 19:58:46 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Loaded landmark splitting collection from 
+2024-10-13 19:58:47 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - version v4.9.1|2024-01-17T09:08:46Z (7,20,5,4,5,7)
+2024-10-13 19:58:47 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - graph CH|car_ors|RAM_STORE|3D|turn_cost|,,,,, details:edges:0(0MB), nodes:0(0MB), name:(0MB), geo:0(0MB), bounds:1.7976931348623157E308,-1.7976931348623157E308,1.7976931348623157E308,-1.7976931348623157E308,1.7976931348623157E308,-1.7976931348623157E308, shortcuts:0 (0MB), nodesCH:-1 (0MB), shortcuts:0 (0MB), nodesCH:-1 (0MB), shortcuts:0 (0MB), nodesCH:-1 (0MB)
+2024-10-13 19:58:47 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - No custom areas are used, custom_areas.directory not given
+2024-10-13 19:58:47 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - start creating graph from /home/ors/files
+2024-10-13 19:58:47 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - using CH|car_ors|RAM_STORE|3D|turn_cost|,,,,, memory:totalMB:1024, usedMB:272
+2024-10-13 19:58:47 ERROR [o.h.o.r.RoutingProfileManager           ] - 
+2024-10-13 19:58:47 ERROR [o.h.o.r.RoutingProfileManager           ] - Unhandled exception at RoutingProfileManager initialization: Output files can not be written. Make sure ors.engine.graphs_data_access is set to a writable type! 
+2024-10-13 19:58:47 ERROR [o.h.o.r.RoutingProfileManager           ] - 
+2024-10-13 19:58:47 INFO [o.h.o.a.Application                     ] - Started Application in 6.033 seconds (process running for 7.314)
+2024-10-13 19:58:47 INFO [o.h.o.a.Application                     ] - openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"}
+2024-10-13 19:58:47 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Shutting down openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"} and releasing resources.
+2024-10-13 20:00:26 INFO [o.h.o.a.Application                     ] - Starting Application v8.0.0 using Java 21.0.2 with PID 1 (/ors.jar started by root in /home/ors)
+2024-10-13 20:00:26 INFO [o.h.o.a.Application                     ] - The following 1 profile is active: "default"
+2024-10-13 20:00:26 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 20:00:26 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup started.
+2024-10-13 20:00:26 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration file set by environment variable.
+2024-10-13 20:00:26 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Loaded file '/home/ors/config/ors-config.yml'
+2024-10-13 20:00:26 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup finished.
+2024-10-13 20:00:26 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 20:00:29 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Initializing ORS...
+2024-10-13 20:00:29 INFO [o.h.o.r.RoutingProfileManager           ] - Total - 1024 MB, Free - 961.42 MB, Max: 2 GB, Used - 62.58 MB
+2024-10-13 20:00:29 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Initializing profiles from '/home/ors/osm_files' (1 threads) ...
+2024-10-13 20:00:29 INFO [o.h.o.r.RoutingProfileManager           ] - 1 profile configurations submitted as tasks.
+2024-10-13 20:00:29 INFO [o.h.o.r.RoutingProfile                  ] - [1] Profiles: 'driving-car', location: '/home/ors/./graphs/car'.
+2024-10-13 20:00:30 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Loaded landmark splitting collection from 
+2024-10-13 20:00:30 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - version v4.9.1|2024-01-17T09:08:46Z (7,20,5,4,5,7)
+2024-10-13 20:00:30 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - graph CH|car_ors|RAM_STORE|3D|turn_cost|,,,,, details:edges:0(0MB), nodes:0(0MB), name:(0MB), geo:0(0MB), bounds:1.7976931348623157E308,-1.7976931348623157E308,1.7976931348623157E308,-1.7976931348623157E308,1.7976931348623157E308,-1.7976931348623157E308, shortcuts:0 (0MB), nodesCH:-1 (0MB), shortcuts:0 (0MB), nodesCH:-1 (0MB), shortcuts:0 (0MB), nodesCH:-1 (0MB)
+2024-10-13 20:00:30 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - No custom areas are used, custom_areas.directory not given
+2024-10-13 20:00:30 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - start creating graph from /home/ors/osm_files
+2024-10-13 20:00:30 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - using CH|car_ors|RAM_STORE|3D|turn_cost|,,,,, memory:totalMB:1024, usedMB:270
+2024-10-13 20:00:30 ERROR [o.h.o.r.RoutingProfileManager           ] - 
+2024-10-13 20:00:30 ERROR [o.h.o.r.RoutingProfileManager           ] - Failed to either read or execute the ors configuration and its parameters: java.lang.IllegalStateException: Your specified OSM file does not exist:/home/ors/osm_files
+2024-10-13 20:00:30 ERROR [o.h.o.r.RoutingProfileManager           ] - 
+2024-10-13 20:00:31 INFO [o.h.o.a.Application                     ] - Started Application in 5.349 seconds (process running for 6.946)
+2024-10-13 20:00:31 INFO [o.h.o.a.Application                     ] - openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"}
+2024-10-13 20:00:31 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Shutting down openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"} and releasing resources.
+2024-10-13 20:03:34 INFO [o.h.o.a.Application                     ] - Starting Application v8.0.0 using Java 21.0.2 with PID 1 (/ors.jar started by root in /home/ors)
+2024-10-13 20:03:34 INFO [o.h.o.a.Application                     ] - The following 1 profile is active: "default"
+2024-10-13 20:03:34 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 20:03:34 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup started.
+2024-10-13 20:03:34 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration file set by environment variable.
+2024-10-13 20:03:34 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Loaded file '/home/ors/config/ors-config.yml'
+2024-10-13 20:03:34 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup finished.
+2024-10-13 20:03:34 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 20:03:37 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Initializing ORS...
+2024-10-13 20:03:37 INFO [o.h.o.r.RoutingProfileManager           ] - Total - 1024 MB, Free - 956.42 MB, Max: 2 GB, Used - 67.58 MB
+2024-10-13 20:03:37 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Initializing profiles from '/home/ors/osm_files' (1 threads) ...
+2024-10-13 20:03:37 INFO [o.h.o.r.RoutingProfileManager           ] - 1 profile configurations submitted as tasks.
+2024-10-13 20:03:37 INFO [o.h.o.r.RoutingProfile                  ] - [1] Profiles: 'driving-car', location: '/home/ors/./graphs/car'.
+2024-10-13 20:03:37 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Loaded landmark splitting collection from 
+2024-10-13 20:03:37 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - version v4.9.1|2024-01-17T09:08:46Z (7,20,5,4,5,7)
+2024-10-13 20:03:37 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - graph CH|car_ors|RAM_STORE|3D|turn_cost|,,,,, details:edges:0(0MB), nodes:0(0MB), name:(0MB), geo:0(0MB), bounds:1.7976931348623157E308,-1.7976931348623157E308,1.7976931348623157E308,-1.7976931348623157E308,1.7976931348623157E308,-1.7976931348623157E308, shortcuts:0 (0MB), nodesCH:-1 (0MB), shortcuts:0 (0MB), nodesCH:-1 (0MB), shortcuts:0 (0MB), nodesCH:-1 (0MB)
+2024-10-13 20:03:37 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - No custom areas are used, custom_areas.directory not given
+2024-10-13 20:03:37 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - start creating graph from /home/ors/osm_files
+2024-10-13 20:03:38 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - using CH|car_ors|RAM_STORE|3D|turn_cost|,,,,, memory:totalMB:1024, usedMB:273
+2024-10-13 20:03:38 ERROR [o.h.o.r.RoutingProfileManager           ] - 
+2024-10-13 20:03:38 ERROR [o.h.o.r.RoutingProfileManager           ] - Failed to either read or execute the ors configuration and its parameters: java.lang.IllegalStateException: Your specified OSM file does not exist:/home/ors/osm_files
+2024-10-13 20:03:38 ERROR [o.h.o.r.RoutingProfileManager           ] - 
+2024-10-13 20:03:38 INFO [o.h.o.a.Application                     ] - Started Application in 5.374 seconds (process running for 6.885)
+2024-10-13 20:03:38 INFO [o.h.o.a.Application                     ] - openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"}
+2024-10-13 20:03:38 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Shutting down openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"} and releasing resources.
+2024-10-13 20:04:08 INFO [o.h.o.a.Application                     ] - Starting Application v8.0.0 using Java 21.0.2 with PID 1 (/ors.jar started by root in /home/ors)
+2024-10-13 20:04:08 INFO [o.h.o.a.Application                     ] - The following 1 profile is active: "default"
+2024-10-13 20:04:08 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 20:04:08 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup started.
+2024-10-13 20:04:08 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration file set by environment variable.
+2024-10-13 20:04:08 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Loaded file '/home/ors/config/ors-config.yml'
+2024-10-13 20:04:08 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup finished.
+2024-10-13 20:04:08 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 20:04:11 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Initializing ORS...
+2024-10-13 20:04:11 INFO [o.h.o.r.RoutingProfileManager           ] - Total - 1024 MB, Free - 955.23 MB, Max: 2 GB, Used - 69.27 MB
+2024-10-13 20:04:11 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Initializing profiles from '/home/ors/osm_files' (1 threads) ...
+2024-10-13 20:04:11 INFO [o.h.o.r.RoutingProfileManager           ] - 1 profile configurations submitted as tasks.
+2024-10-13 20:04:11 INFO [o.h.o.r.RoutingProfile                  ] - [1] Profiles: 'driving-car', location: '/home/ors/./graphs/car'.
+2024-10-13 20:04:12 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Loaded landmark splitting collection from 
+2024-10-13 20:04:12 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - version v4.9.1|2024-01-17T09:08:46Z (7,20,5,4,5,7)
+2024-10-13 20:04:12 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - graph CH|car_ors|RAM_STORE|3D|turn_cost|,,,,, details:edges:0(0MB), nodes:0(0MB), name:(0MB), geo:0(0MB), bounds:1.7976931348623157E308,-1.7976931348623157E308,1.7976931348623157E308,-1.7976931348623157E308,1.7976931348623157E308,-1.7976931348623157E308, shortcuts:0 (0MB), nodesCH:-1 (0MB), shortcuts:0 (0MB), nodesCH:-1 (0MB), shortcuts:0 (0MB), nodesCH:-1 (0MB)
+2024-10-13 20:04:12 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - No custom areas are used, custom_areas.directory not given
+2024-10-13 20:04:12 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - start creating graph from /home/ors/osm_files
+2024-10-13 20:04:12 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - using CH|car_ors|RAM_STORE|3D|turn_cost|,,,,, memory:totalMB:1024, usedMB:274
+2024-10-13 20:04:12 ERROR [o.h.o.r.RoutingProfileManager           ] - 
+2024-10-13 20:04:12 ERROR [o.h.o.r.RoutingProfileManager           ] - Failed to either read or execute the ors configuration and its parameters: java.lang.IllegalStateException: Your specified OSM file does not exist:/home/ors/osm_files
+2024-10-13 20:04:12 ERROR [o.h.o.r.RoutingProfileManager           ] - 
+2024-10-13 20:04:13 INFO [o.h.o.a.Application                     ] - Started Application in 6.055 seconds (process running for 7.552)
+2024-10-13 20:04:13 INFO [o.h.o.a.Application                     ] - openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"}
+2024-10-13 20:04:13 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Shutting down openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"} and releasing resources.
+2024-10-13 20:06:19 INFO [o.h.o.a.Application                     ] - Starting Application v8.0.0 using Java 21.0.2 with PID 1 (/ors.jar started by root in /home/ors)
+2024-10-13 20:06:19 INFO [o.h.o.a.Application                     ] - The following 1 profile is active: "default"
+2024-10-13 20:06:20 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 20:06:20 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup started.
+2024-10-13 20:06:20 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration file set by environment variable.
+2024-10-13 20:06:20 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Loaded file '/home/ors/config/ors-config.yml'
+2024-10-13 20:06:20 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup finished.
+2024-10-13 20:06:20 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 20:06:22 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Initializing ORS...
+2024-10-13 20:06:22 INFO [o.h.o.r.RoutingProfileManager           ] - Total - 1024 MB, Free - 954.98 MB, Max: 2 GB, Used - 69.02 MB
+2024-10-13 20:06:22 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Initializing profiles from '/home/ors/osm_files' (1 threads) ...
+2024-10-13 20:06:22 INFO [o.h.o.r.RoutingProfileManager           ] - 1 profile configurations submitted as tasks.
+2024-10-13 20:06:22 INFO [o.h.o.r.RoutingProfile                  ] - [1] Profiles: 'driving-car', location: '/home/ors/./graphs/car'.
+2024-10-13 20:06:23 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Loaded landmark splitting collection from 
+2024-10-13 20:06:23 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - version v4.9.1|2024-01-17T09:08:46Z (7,20,5,4,5,7)
+2024-10-13 20:06:23 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - graph CH|car_ors|RAM_STORE|3D|turn_cost|,,,,, details:edges:0(0MB), nodes:0(0MB), name:(0MB), geo:0(0MB), bounds:1.7976931348623157E308,-1.7976931348623157E308,1.7976931348623157E308,-1.7976931348623157E308,1.7976931348623157E308,-1.7976931348623157E308, shortcuts:0 (0MB), nodesCH:-1 (0MB), shortcuts:0 (0MB), nodesCH:-1 (0MB), shortcuts:0 (0MB), nodesCH:-1 (0MB)
+2024-10-13 20:06:23 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - No custom areas are used, custom_areas.directory not given
+2024-10-13 20:06:23 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - start creating graph from /home/ors/osm_files
+2024-10-13 20:06:23 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - using CH|car_ors|RAM_STORE|3D|turn_cost|,,,,, memory:totalMB:1024, usedMB:272
+2024-10-13 20:06:23 ERROR [o.h.o.r.RoutingProfileManager           ] - 
+2024-10-13 20:06:23 ERROR [o.h.o.r.RoutingProfileManager           ] - Failed to either read or execute the ors configuration and its parameters: java.lang.IllegalStateException: Your specified OSM file does not exist:/home/ors/osm_files
+2024-10-13 20:06:23 ERROR [o.h.o.r.RoutingProfileManager           ] - 
+2024-10-13 20:06:24 INFO [o.h.o.a.Application                     ] - Started Application in 5.684 seconds (process running for 7.145)
+2024-10-13 20:06:24 INFO [o.h.o.a.Application                     ] - openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"}
+2024-10-13 20:06:24 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Shutting down openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"} and releasing resources.
+2024-10-13 20:14:14 INFO [o.h.o.a.Application                     ] - Starting Application v8.0.0 using Java 21.0.2 with PID 1 (/ors.jar started by root in /home/ors)
+2024-10-13 20:14:14 INFO [o.h.o.a.Application                     ] - The following 1 profile is active: "default"
+2024-10-13 20:14:14 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 20:14:14 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup started.
+2024-10-13 20:14:14 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration file set by environment variable.
+2024-10-13 20:14:14 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Loaded file '/home/ors/config/ors-config.yml'
+2024-10-13 20:14:14 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup finished.
+2024-10-13 20:14:14 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 20:14:16 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Initializing ORS...
+2024-10-13 20:14:16 INFO [o.h.o.r.RoutingProfileManager           ] - Total - 1024 MB, Free - 970.24 MB, Max: 2 GB, Used - 53.76 MB
+2024-10-13 20:14:16 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Initializing profiles from '/home/ors/osm_files/map.osm' (1 threads) ...
+2024-10-13 20:14:16 INFO [o.h.o.r.RoutingProfileManager           ] - 1 profile configurations submitted as tasks.
+2024-10-13 20:14:16 INFO [o.h.o.r.RoutingProfile                  ] - [1] Profiles: 'driving-car', location: '/home/ors/./graphs/car'.
+2024-10-13 20:14:17 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Loaded landmark splitting collection from 
+2024-10-13 20:14:17 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - version v4.9.1|2024-01-17T09:08:46Z (7,20,5,4,5,7)
+2024-10-13 20:14:17 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - graph CH|car_ors|RAM_STORE|3D|turn_cost|,,,,, details:edges:0(0MB), nodes:0(0MB), name:(0MB), geo:0(0MB), bounds:1.7976931348623157E308,-1.7976931348623157E308,1.7976931348623157E308,-1.7976931348623157E308,1.7976931348623157E308,-1.7976931348623157E308, shortcuts:0 (0MB), nodesCH:-1 (0MB), shortcuts:0 (0MB), nodesCH:-1 (0MB), shortcuts:0 (0MB), nodesCH:-1 (0MB)
+2024-10-13 20:14:17 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - No custom areas are used, custom_areas.directory not given
+2024-10-13 20:14:17 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - start creating graph from /home/ors/osm_files/map.osm
+2024-10-13 20:14:17 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - using CH|car_ors|RAM_STORE|3D|turn_cost|,,,,, memory:totalMB:1024, usedMB:258
+2024-10-13 20:14:17 ERROR [o.h.o.r.RoutingProfileManager           ] - 
+2024-10-13 20:14:17 ERROR [o.h.o.r.RoutingProfileManager           ] - Failed to either read or execute the ors configuration and its parameters: java.lang.IllegalStateException: Your specified OSM file does not exist:/home/ors/osm_files/map.osm
+2024-10-13 20:14:17 ERROR [o.h.o.r.RoutingProfileManager           ] - 
+2024-10-13 20:14:18 INFO [o.h.o.a.Application                     ] - Started Application in 5.309 seconds (process running for 6.838)
+2024-10-13 20:14:18 INFO [o.h.o.a.Application                     ] - openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"}
+2024-10-13 20:14:18 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Shutting down openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"} and releasing resources.
+2024-10-13 20:15:03 INFO [o.h.o.a.Application                     ] - Starting Application v8.0.0 using Java 21.0.2 with PID 1 (/ors.jar started by root in /home/ors)
+2024-10-13 20:15:03 INFO [o.h.o.a.Application                     ] - The following 1 profile is active: "default"
+2024-10-13 20:15:03 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 20:15:03 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup started.
+2024-10-13 20:15:03 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration file set by environment variable.
+2024-10-13 20:15:03 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Loaded file '/home/ors/config/ors-config.yml'
+2024-10-13 20:15:03 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - Configuration lookup finished.
+2024-10-13 20:15:03 INFO [o.h.o.a.ORSEnvironmentPostProcessor     ] - 
+2024-10-13 20:15:06 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Initializing ORS...
+2024-10-13 20:15:06 INFO [o.h.o.r.RoutingProfileManager           ] - Total - 1024 MB, Free - 955.08 MB, Max: 2 GB, Used - 69.42 MB
+2024-10-13 20:15:06 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Initializing profiles from '/home/ors/osm_file/map.osm' (1 threads) ...
+2024-10-13 20:15:06 INFO [o.h.o.r.RoutingProfileManager           ] - 1 profile configurations submitted as tasks.
+2024-10-13 20:15:06 INFO [o.h.o.r.RoutingProfile                  ] - [1] Profiles: 'driving-car', location: '/home/ors/./graphs/car'.
+2024-10-13 20:15:07 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Loaded landmark splitting collection from 
+2024-10-13 20:15:07 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - version v4.9.1|2024-01-17T09:08:46Z (7,20,5,4,5,7)
+2024-10-13 20:15:07 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - graph CH|car_ors|RAM_STORE|3D|turn_cost|,,,,, details:edges:0(0MB), nodes:0(0MB), name:(0MB), geo:0(0MB), bounds:1.7976931348623157E308,-1.7976931348623157E308,1.7976931348623157E308,-1.7976931348623157E308,1.7976931348623157E308,-1.7976931348623157E308, shortcuts:0 (0MB), nodesCH:-1 (0MB), shortcuts:0 (0MB), nodesCH:-1 (0MB), shortcuts:0 (0MB), nodesCH:-1 (0MB)
+2024-10-13 20:15:07 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - No custom areas are used, custom_areas.directory not given
+2024-10-13 20:15:07 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - start creating graph from /home/ors/osm_file/map.osm
+2024-10-13 20:15:07 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - using CH|car_ors|RAM_STORE|3D|turn_cost|,,,,, memory:totalMB:1024, usedMB:275
+2024-10-13 20:15:07 INFO [o.h.o.a.Application                     ] - Started Application in 5.098 seconds (process running for 6.567)
+2024-10-13 20:15:07 INFO [o.h.o.a.Application                     ] - openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"}
+2024-10-13 20:15:39 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - call cleanUp for '/home/ors/./graphs/car' 
+2024-10-13 20:15:39 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - graph CH|car_ors|RAM_STORE|3D|turn_cost|7,20,5,4,5, details:edges:5 112(1MB), nodes:4 287(1MB), name:(2MB), geo:13 277(1MB), bounds:-76.5803188,-76.4722546,3.2860663,3.3798539,950.0,1217.0, shortcuts:0 (1MB), nodesCH:-1 (1MB), shortcuts:0 (1MB), nodesCH:-1 (1MB), shortcuts:0 (1MB), nodesCH:-1 (1MB)
+2024-10-13 20:15:39 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - nodes: 4 287, edges: 5 112
+2024-10-13 20:15:39 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - Bridge interpolation 0s, tunnel interpolation 0s, ferry interpolation 0s
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.CorePreparationHandler    ] - Creating CH preparations, totalMB:1024, usedMB:521
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.CorePreparationHandler    ] - 1/2 calling CH prepare.doWork for profile 'car_ors_fastest_with_turn_costs' EDGE_BASED ... (totalMB:1024, usedMB:521)
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.CorePreparationHandler    ] - 2/2 calling CH prepare.doWork for profile 'car_ors_shortest_with_turn_costs' EDGE_BASED ... (totalMB:1024, usedMB:521)
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Creating Core graph, totalMB:1024, usedMB:522
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Building Core graph, totalMB:1024, usedMB:522
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Finished building Core graph, took: 0.027257027s, totalMB:1024, usedMB:528
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Building initial queue of nodes to be contracted: 4287 nodes, totalMB:1024, usedMB:533
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Finished building queue, took: 0.0156672s, totalMB:1024, usedMB:534
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      4 182, shortcuts:          0, updates:  0, checked-nodes:          0, t(total):   0.07,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.05, dijkstra-ratio:   0.99%, meanDegree: 1.19, dijkstras:     12 895, mem:        0MB, totalMB:1024, usedMB:534
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      3 978, shortcuts:          0, updates:  0, checked-nodes:        209, t(total):   0.07,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.06, dijkstra-ratio:   0.91%, meanDegree: 1.00, dijkstras:     12 895, mem:        0MB, totalMB:1024, usedMB:534
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      3 776, shortcuts:          0, updates:  0, checked-nodes:        418, t(total):   0.08,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.06, dijkstra-ratio:   0.88%, meanDegree: 1.00, dijkstras:     12 895, mem:        0MB, totalMB:1024, usedMB:534
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      3 575, shortcuts:          0, updates:  0, checked-nodes:        627, t(total):   0.08,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.06, dijkstra-ratio:   0.85%, meanDegree: 1.00, dijkstras:     12 895, mem:        0MB, totalMB:1024, usedMB:534
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      3 387, shortcuts:          0, updates:  0, checked-nodes:        836, t(total):   0.08,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.06, dijkstra-ratio:   0.83%, meanDegree: 1.00, dijkstras:     12 895, mem:        0MB, totalMB:1024, usedMB:534
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      3 185, shortcuts:          1, updates:  0, checked-nodes:      1 045, t(total):   0.09,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.06, dijkstra-ratio:   1.92%, meanDegree: 1.50, dijkstras:     13 063, mem:        0MB, totalMB:1024, usedMB:534
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      3 004, shortcuts:          8, updates:  0, checked-nodes:      1 254, t(total):   0.09,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.06, dijkstra-ratio:   3.35%, meanDegree: 1.93, dijkstras:     13 709, mem:        0MB, totalMB:1024, usedMB:534
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      2 832, shortcuts:         27, updates:  0, checked-nodes:      1 463, t(total):   0.10,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.07, dijkstra-ratio:   4.65%, meanDegree: 1.95, dijkstras:     14 285, mem:        0MB, totalMB:1024, usedMB:534
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      2 641, shortcuts:         97, updates:  0, checked-nodes:      1 672, t(total):   0.10,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.07, dijkstra-ratio:   5.36%, meanDegree: 1.00, dijkstras:     14 674, mem:        0MB, totalMB:1024, usedMB:534
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      2 486, shortcuts:        129, updates:  0, checked-nodes:      1 881, t(total):   0.10,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.07, dijkstra-ratio:   5.36%, meanDegree: 1.79, dijkstras:     15 062, mem:        0MB, totalMB:1024, usedMB:534
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      2 368, shortcuts:        180, updates:  0, checked-nodes:      2 090, t(total):   0.11,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.07, dijkstra-ratio:   5.63%, meanDegree: 1.65, dijkstras:     15 627, mem:        0MB, totalMB:1024, usedMB:534
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      2 230, shortcuts:        304, updates:  0, checked-nodes:      2 299, t(total):   0.11,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.02, t(other) :   0.07, dijkstra-ratio:   6.31%, meanDegree: 1.77, dijkstras:     16 339, mem:        0MB, totalMB:1024, usedMB:534
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      2 106, shortcuts:        414, updates:  0, checked-nodes:      2 508, t(total):   0.12,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.02, t(other) :   0.07, dijkstra-ratio:   6.93%, meanDegree: 0.97, dijkstras:     17 092, mem:        0MB, totalMB:1024, usedMB:535
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      1 960, shortcuts:        609, updates:  0, checked-nodes:      2 717, t(total):   0.12,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.02, t(other) :   0.08, dijkstra-ratio:   7.92%, meanDegree: 0.46, dijkstras:     18 045, mem:        0MB, totalMB:1024, usedMB:535
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      1 766, shortcuts:        632, updates:  0, checked-nodes:      2 926, t(total):   0.13,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.02, t(other) :   0.08, dijkstra-ratio:   7.71%, meanDegree: 0.00, dijkstras:     18 185, mem:        0MB, totalMB:1024, usedMB:535
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      1 576, shortcuts:        694, updates:  0, checked-nodes:      3 135, t(total):   0.13,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.02, t(other) :   0.08, dijkstra-ratio:   7.92%, meanDegree: 2.75, dijkstras:     18 463, mem:        0MB, totalMB:1024, usedMB:535
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      1 424, shortcuts:        884, updates:  0, checked-nodes:      3 344, t(total):   0.14,  t(period):   0.01, t(lazy):   0.02, t(neighbor):   0.00, t(contr):   0.02, t(other) :   0.09, dijkstra-ratio:   9.81%, meanDegree: 2.24, dijkstras:     19 953, mem:        0MB, totalMB:1024, usedMB:535
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      1 236, shortcuts:      1 012, updates:  0, checked-nodes:      3 553, t(total):   0.16,  t(period):   0.01, t(lazy):   0.02, t(neighbor):   0.00, t(contr):   0.03, t(other) :   0.10, dijkstra-ratio:  10.68%, meanDegree: 2.05, dijkstras:     21 420, mem:        0MB, totalMB:1024, usedMB:535
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      1 063, shortcuts:      1 211, updates:  0, checked-nodes:      3 762, t(total):   0.17,  t(period):   0.01, t(lazy):   0.02, t(neighbor):   0.00, t(contr):   0.03, t(other) :   0.10, dijkstra-ratio:  12.49%, meanDegree: 1.78, dijkstras:     22 852, mem:        0MB, totalMB:1024, usedMB:535
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:        884, shortcuts:      1 429, updates:  0, checked-nodes:      3 971, t(total):   0.18,  t(period):   0.01, t(lazy):   0.03, t(neighbor):   0.00, t(contr):   0.03, t(other) :   0.11, dijkstra-ratio:  13.82%, meanDegree: 2.01, dijkstras:     24 391, mem:        0MB, totalMB:1024, usedMB:535
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:        717, shortcuts:      1 675, updates:  0, checked-nodes:      4 180, t(total):   0.19,  t(period):   0.01, t(lazy):   0.03, t(neighbor):   0.00, t(contr):   0.04, t(other) :   0.11, dijkstra-ratio:  15.31%, meanDegree: 2.58, dijkstras:     26 046, mem:        0MB, totalMB:1024, usedMB:535
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:        542, shortcuts:      1 960, updates:  0, checked-nodes:      4 389, t(total):   0.21,  t(period):   0.01, t(lazy):   0.04, t(neighbor):   0.00, t(contr):   0.04, t(other) :   0.12, dijkstra-ratio:  16.52%, meanDegree: 2.18, dijkstras:     27 744, mem:        0MB, totalMB:1024, usedMB:535
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:        406, shortcuts:      2 308, updates:  0, checked-nodes:      4 598, t(total):   0.22,  t(period):   0.01, t(lazy):   0.04, t(neighbor):   0.00, t(contr):   0.04, t(other) :   0.12, dijkstra-ratio:  17.63%, meanDegree: 3.73, dijkstras:     29 617, mem:        0MB, totalMB:1024, usedMB:536
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:        281, shortcuts:      2 740, updates:  0, checked-nodes:      4 807, t(total):   0.23,  t(period):   0.01, t(lazy):   0.05, t(neighbor):   0.00, t(contr):   0.05, t(other) :   0.12, dijkstra-ratio:  20.20%, meanDegree: 3.58, dijkstras:     32 233, mem:        0MB, totalMB:1024, usedMB:536
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:        114, shortcuts:      3 243, updates:  0, checked-nodes:      5 016, t(total):   0.24,  t(period):   0.01, t(lazy):   0.05, t(neighbor):   0.00, t(contr):   0.05, t(other) :   0.12, dijkstra-ratio:  22.41%, meanDegree: 3.00, dijkstras:     36 636, mem:        0MB, totalMB:1024, usedMB:536
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:          0, shortcuts:      4 107, updates:  0, checked-nodes:      5 122, t(total):   0.26,  t(period):   0.01, t(lazy):   0.06, t(neighbor):   0.00, t(contr):   0.05, t(other) :   0.13, dijkstra-ratio:  23.32%, meanDegree: 3.66, dijkstras:     39 033, mem:        0MB, totalMB:1024, usedMB:536
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - new shortcuts: 4 107, initSize:4 182, limited_access|fastest|car_ors, periodic:0, lazy:100, neighbor:0, t(total):   0.26,  t(period):   0.01, t(lazy):   0.06, t(neighbor):   0.00, t(contr):   0.05, t(other) :   0.13, dijkstra-ratio:  23.20%, lazy-overhead: 22%, totalMB:1024, usedMB:536
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - shortcuts that exceed maximum weight: 0
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - took: 0s, graph now - num edges: 5 112, num nodes: 4 287, num shortcuts: 4 107
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Creating Core graph, totalMB:1024, usedMB:536
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Building Core graph, totalMB:1024, usedMB:536
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Finished building Core graph, took: 0.014717668s, totalMB:1024, usedMB:541
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Building initial queue of nodes to be contracted: 4287 nodes, totalMB:1024, usedMB:542
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - Finished building queue, took: 0.011238837s, totalMB:1024, usedMB:543
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      4 182, shortcuts:          0, updates:  0, checked-nodes:          0, t(total):   0.07,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.06, dijkstra-ratio:   0.85%, meanDegree: 1.19, dijkstras:     12 895, mem:        0MB, totalMB:1024, usedMB:543
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      3 978, shortcuts:          0, updates:  0, checked-nodes:        209, t(total):   0.07,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.06, dijkstra-ratio:   0.83%, meanDegree: 1.00, dijkstras:     12 895, mem:        0MB, totalMB:1024, usedMB:543
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      3 776, shortcuts:          0, updates:  0, checked-nodes:        418, t(total):   0.07,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.06, dijkstra-ratio:   0.79%, meanDegree: 1.00, dijkstras:     12 895, mem:        0MB, totalMB:1024, usedMB:543
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      3 575, shortcuts:          0, updates:  0, checked-nodes:        627, t(total):   0.07,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.06, dijkstra-ratio:   0.77%, meanDegree: 1.00, dijkstras:     12 895, mem:        0MB, totalMB:1024, usedMB:543
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      3 387, shortcuts:          0, updates:  0, checked-nodes:        836, t(total):   0.08,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.06, dijkstra-ratio:   0.75%, meanDegree: 1.00, dijkstras:     12 895, mem:        0MB, totalMB:1024, usedMB:543
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      3 185, shortcuts:          1, updates:  0, checked-nodes:      1 045, t(total):   0.08,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.06, dijkstra-ratio:   1.10%, meanDegree: 1.50, dijkstras:     13 063, mem:        0MB, totalMB:1024, usedMB:543
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      3 004, shortcuts:          9, updates:  0, checked-nodes:      1 254, t(total):   0.08,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.07, dijkstra-ratio:   1.96%, meanDegree: 1.93, dijkstras:     13 715, mem:        0MB, totalMB:1024, usedMB:543
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      2 832, shortcuts:         29, updates:  0, checked-nodes:      1 463, t(total):   0.08,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.07, dijkstra-ratio:   2.64%, meanDegree: 1.95, dijkstras:     14 295, mem:        0MB, totalMB:1024, usedMB:543
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      2 641, shortcuts:         99, updates:  0, checked-nodes:      1 672, t(total):   0.09,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.07, dijkstra-ratio:   2.97%, meanDegree: 1.00, dijkstras:     14 684, mem:        0MB, totalMB:1024, usedMB:543
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      2 485, shortcuts:        132, updates:  0, checked-nodes:      1 881, t(total):   0.09,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.00, t(other) :   0.08, dijkstra-ratio:   2.99%, meanDegree: 1.79, dijkstras:     15 074, mem:        0MB, totalMB:1024, usedMB:543
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      2 369, shortcuts:        180, updates:  0, checked-nodes:      2 090, t(total):   0.10,  t(period):   0.01, t(lazy):   0.00, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.08, dijkstra-ratio:   3.21%, meanDegree: 1.81, dijkstras:     15 637, mem:        0MB, totalMB:1024, usedMB:543
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      2 226, shortcuts:        316, updates:  0, checked-nodes:      2 299, t(total):   0.10,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.08, dijkstra-ratio:   3.63%, meanDegree: 1.84, dijkstras:     16 374, mem:        0MB, totalMB:1024, usedMB:543
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      2 096, shortcuts:        441, updates:  0, checked-nodes:      2 508, t(total):   0.10,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.08, dijkstra-ratio:   4.22%, meanDegree: 1.59, dijkstras:     17 172, mem:        0MB, totalMB:1024, usedMB:544
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      1 946, shortcuts:        633, updates:  0, checked-nodes:      2 717, t(total):   0.11,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.08, dijkstra-ratio:   4.87%, meanDegree: 0.51, dijkstras:     18 107, mem:        0MB, totalMB:1024, usedMB:544
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      1 746, shortcuts:        647, updates:  0, checked-nodes:      2 926, t(total):   0.11,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.08, dijkstra-ratio:   4.82%, meanDegree: 0.00, dijkstras:     18 192, mem:        0MB, totalMB:1024, usedMB:544
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      1 568, shortcuts:        725, updates:  0, checked-nodes:      3 135, t(total):   0.11,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.08, dijkstra-ratio:   5.29%, meanDegree: 2.35, dijkstras:     18 527, mem:        0MB, totalMB:1024, usedMB:544
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      1 404, shortcuts:        903, updates:  0, checked-nodes:      3 344, t(total):   0.12,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.09, dijkstra-ratio:   6.45%, meanDegree: 2.11, dijkstras:     20 058, mem:        0MB, totalMB:1024, usedMB:544
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      1 225, shortcuts:      1 054, updates:  0, checked-nodes:      3 553, t(total):   0.12,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.09, dijkstra-ratio:   7.67%, meanDegree: 2.10, dijkstras:     21 639, mem:        0MB, totalMB:1024, usedMB:544
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:      1 047, shortcuts:      1 248, updates:  0, checked-nodes:      3 762, t(total):   0.13,  t(period):   0.01, t(lazy):   0.01, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.09, dijkstra-ratio:   8.90%, meanDegree: 2.71, dijkstras:     23 070, mem:        0MB, totalMB:1024, usedMB:544
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:        869, shortcuts:      1 480, updates:  0, checked-nodes:      3 971, t(total):   0.13,  t(period):   0.01, t(lazy):   0.02, t(neighbor):   0.00, t(contr):   0.01, t(other) :   0.09, dijkstra-ratio:   9.75%, meanDegree: 3.03, dijkstras:     24 724, mem:        0MB, totalMB:1024, usedMB:544
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:        701, shortcuts:      1 732, updates:  0, checked-nodes:      4 180, t(total):   0.14,  t(period):   0.01, t(lazy):   0.02, t(neighbor):   0.00, t(contr):   0.02, t(other) :   0.09, dijkstra-ratio:  10.78%, meanDegree: 2.85, dijkstras:     26 477, mem:        0MB, totalMB:1024, usedMB:544
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:        534, shortcuts:      2 009, updates:  0, checked-nodes:      4 389, t(total):   0.14,  t(period):   0.01, t(lazy):   0.02, t(neighbor):   0.00, t(contr):   0.02, t(other) :   0.09, dijkstra-ratio:  11.72%, meanDegree: 1.79, dijkstras:     28 099, mem:        0MB, totalMB:1024, usedMB:544
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:        393, shortcuts:      2 394, updates:  0, checked-nodes:      4 598, t(total):   0.15,  t(period):   0.01, t(lazy):   0.02, t(neighbor):   0.00, t(contr):   0.02, t(other) :   0.09, dijkstra-ratio:  12.58%, meanDegree: 2.81, dijkstras:     30 108, mem:        0MB, totalMB:1024, usedMB:545
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:        267, shortcuts:      2 856, updates:  0, checked-nodes:      4 807, t(total):   0.15,  t(period):   0.01, t(lazy):   0.02, t(neighbor):   0.00, t(contr):   0.02, t(other) :   0.10, dijkstra-ratio:  13.86%, meanDegree: 3.59, dijkstras:     33 131, mem:        0MB, totalMB:1024, usedMB:545
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:         98, shortcuts:      3 428, updates:  0, checked-nodes:      5 016, t(total):   0.16,  t(period):   0.01, t(lazy):   0.03, t(neighbor):   0.00, t(contr):   0.03, t(other) :   0.10, dijkstra-ratio:  15.87%, meanDegree: 2.84, dijkstras:     38 249, mem:        0MB, totalMB:1024, usedMB:545
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - edge, nodes:          0, shortcuts:      4 270, updates:  0, checked-nodes:      5 094, t(total):   0.17,  t(period):   0.01, t(lazy):   0.03, t(neighbor):   0.00, t(contr):   0.03, t(other) :   0.10, dijkstra-ratio:  16.20%, meanDegree: 4.49, dijkstras:     40 200, mem:        0MB, totalMB:1024, usedMB:545
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - new shortcuts: 4 270, initSize:4 182, limited_access|shortest|car_ors, periodic:0, lazy:100, neighbor:0, t(total):   0.17,  t(period):   0.01, t(lazy):   0.03, t(neighbor):   0.00, t(contr):   0.03, t(other) :   0.10, dijkstra-ratio:  16.10%, lazy-overhead: 21%, totalMB:1024, usedMB:545
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - shortcuts that exceed maximum weight: 0
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.PrepareCore               ] - took: 0s, graph now - num edges: 5 112, num nodes: 4 287, num shortcuts: 4 270
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.CorePreparationHandler    ] - Finished CH preparation, totalMB:1024, usedMB:545
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Creating LM preparations, totalMB:1024, usedMB:545
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_fastest_with_turn_costs_highways of size 146
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_fastest_with_turn_costs_allow_all of size 146
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_shortest_with_turn_costs_highways of size 146
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - Created core node ID map for car_ors_shortest_with_turn_costs_allow_all of size 146
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - 1/4 calling LM prepare.doWork for limited_access|fastest|car_ors ... (totalMB:1024, usedMB:547)
+2024-10-13 20:15:40 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 5 (3.3134444,-76.4880592): too many weights were maxed out (14/126). Use a bigger factor than 0.015128637890625. For example use maximum_lm_weight: 1415.4277632 in your LM profile definition
+2024-10-13 20:15:40 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 10 (3.3065989,-76.5051365): too many weights were maxed out (42/126). Use a bigger factor than 0.015128637890625. For example use maximum_lm_weight: 1655.7046272 in your LM profile definition
+2024-10-13 20:15:40 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 10 (3.3065989,-76.5051365): too many weights were maxed out (36/126). Use a bigger factor than 0.015128637890625. For example use maximum_lm_weight: 1589.1438254117645 in your LM profile definition
+2024-10-13 20:15:40 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 21 (3.357329,-76.5402361): too many weights were maxed out (15/126). Use a bigger factor than 0.015128637890625. For example use maximum_lm_weight: 1655.7046272 in your LM profile definition
+2024-10-13 20:15:40 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 59 (3.3242257,-76.4893668): too many weights were maxed out (16/126). Use a bigger factor than 0.015128637890625. For example use maximum_lm_weight: 1428.4657631999996 in your LM profile definition
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - LM car_ors_fastest_with_turn_costs_highways finished totalMB:1024, usedMB:626
+2024-10-13 20:15:40 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - 2/4 calling LM prepare.doWork for limited_access|fastest|car_ors ... (totalMB:1024, usedMB:626)
+2024-10-13 20:15:40 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 5 (3.3134444,-76.4880592): too many weights were maxed out (14/126). Use a bigger factor than 0.015128637890625. For example use maximum_lm_weight: 1415.4277632 in your LM profile definition
+2024-10-13 20:15:40 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 10 (3.3065989,-76.5051365): too many weights were maxed out (42/126). Use a bigger factor than 0.015128637890625. For example use maximum_lm_weight: 1655.7046272 in your LM profile definition
+2024-10-13 20:15:40 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 10 (3.3065989,-76.5051365): too many weights were maxed out (36/126). Use a bigger factor than 0.015128637890625. For example use maximum_lm_weight: 1589.1438254117645 in your LM profile definition
+2024-10-13 20:15:40 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 21 (3.357329,-76.5402361): too many weights were maxed out (15/126). Use a bigger factor than 0.015128637890625. For example use maximum_lm_weight: 1655.7046272 in your LM profile definition
+2024-10-13 20:15:40 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 59 (3.3242257,-76.4893668): too many weights were maxed out (16/126). Use a bigger factor than 0.015128637890625. For example use maximum_lm_weight: 1428.4657631999996 in your LM profile definition
+2024-10-13 20:15:41 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - LM car_ors_fastest_with_turn_costs_allow_all finished totalMB:1024, usedMB:681
+2024-10-13 20:15:41 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - 3/4 calling LM prepare.doWork for limited_access|shortest|car_ors ... (totalMB:1024, usedMB:681)
+2024-10-13 20:15:41 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 2 (3.3353392,-76.5239141): too many weights were maxed out (38/126). Use a bigger factor than 0.12774300512695314. For example use maximum_lm_weight: 13951.9692 in your LM profile definition
+2024-10-13 20:15:41 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 5 (3.3179928,-76.5158539): too many weights were maxed out (17/126). Use a bigger factor than 0.12774300512695314. For example use maximum_lm_weight: 12454.018799999998 in your LM profile definition
+2024-10-13 20:15:41 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 9 (3.3157262,-76.5323385): too many weights were maxed out (14/126). Use a bigger factor than 0.12774300512695314. For example use maximum_lm_weight: 11919.307199999997 in your LM profile definition
+2024-10-13 20:15:41 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 11 (3.3168013,-76.4942851): too many weights were maxed out (30/126). Use a bigger factor than 0.12774300512695314. For example use maximum_lm_weight: 10996.490400000002 in your LM profile definition
+2024-10-13 20:15:41 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 11 (3.3168013,-76.4942851): too many weights were maxed out (29/126). Use a bigger factor than 0.12774300512695314. For example use maximum_lm_weight: 12901.407599999999 in your LM profile definition
+2024-10-13 20:15:41 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 54 (3.3162286,-76.5049661): too many weights were maxed out (30/126). Use a bigger factor than 0.12774300512695314. For example use maximum_lm_weight: 10933.676399999998 in your LM profile definition
+2024-10-13 20:15:41 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 54 (3.3162286,-76.5049661): too many weights were maxed out (29/126). Use a bigger factor than 0.12774300512695314. For example use maximum_lm_weight: 12880.2708 in your LM profile definition
+2024-10-13 20:15:41 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - LM car_ors_shortest_with_turn_costs_highways finished totalMB:1024, usedMB:743
+2024-10-13 20:15:41 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - 4/4 calling LM prepare.doWork for limited_access|shortest|car_ors ... (totalMB:1024, usedMB:743)
+2024-10-13 20:15:41 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 2 (3.3353392,-76.5239141): too many weights were maxed out (38/126). Use a bigger factor than 0.12774300512695314. For example use maximum_lm_weight: 13951.9692 in your LM profile definition
+2024-10-13 20:15:41 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 5 (3.3179928,-76.5158539): too many weights were maxed out (17/126). Use a bigger factor than 0.12774300512695314. For example use maximum_lm_weight: 12454.018799999998 in your LM profile definition
+2024-10-13 20:15:41 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 9 (3.3157262,-76.5323385): too many weights were maxed out (14/126). Use a bigger factor than 0.12774300512695314. For example use maximum_lm_weight: 11919.307199999997 in your LM profile definition
+2024-10-13 20:15:41 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 11 (3.3168013,-76.4942851): too many weights were maxed out (30/126). Use a bigger factor than 0.12774300512695314. For example use maximum_lm_weight: 10996.490400000002 in your LM profile definition
+2024-10-13 20:15:41 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 11 (3.3168013,-76.4942851): too many weights were maxed out (29/126). Use a bigger factor than 0.12774300512695314. For example use maximum_lm_weight: 12901.407599999999 in your LM profile definition
+2024-10-13 20:15:41 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 54 (3.3162286,-76.5049661): too many weights were maxed out (30/126). Use a bigger factor than 0.12774300512695314. For example use maximum_lm_weight: 10933.676399999998 in your LM profile definition
+2024-10-13 20:15:41 WARN [o.h.o.r.g.e.c.CoreLandmarkStorage       ] - landmark 54 (3.3162286,-76.5049661): too many weights were maxed out (29/126). Use a bigger factor than 0.12774300512695314. For example use maximum_lm_weight: 12880.2708 in your LM profile definition
+2024-10-13 20:15:41 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - LM car_ors_shortest_with_turn_costs_allow_all finished totalMB:1024, usedMB:191
+2024-10-13 20:15:41 INFO [o.h.o.r.g.e.c.CoreLMPreparationHandler  ] - Finished LM preparation, totalMB:1024, usedMB:191
+2024-10-13 20:15:41 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - flushing graph CH|car_ors|RAM_STORE|3D|turn_cost|7,20,5,4,5, details:edges:5 112(1MB), nodes:4 287(1MB), name:(2MB), geo:13 277(1MB), bounds:-76.5803188,-76.4722546,3.2860663,3.3798539,950.0,1217.0, shortcuts:3 196 (1MB), nodesCH:4 287 (1MB), shortcuts:4 107 (1MB), nodesCH:4 287 (1MB), shortcuts:4 270 (1MB), nodesCH:4 287 (1MB), totalMB:1024, usedMB:191)
+2024-10-13 20:15:41 INFO [o.h.o.r.g.e.ORSGraphHopper              ] - flushed graph totalMB:1024, usedMB:209)
+2024-10-13 20:15:41 INFO [o.h.o.r.RoutingProfile                  ] - [1] Edges: 5112 - Nodes: 4287.
+2024-10-13 20:15:41 INFO [o.h.o.r.RoutingProfile                  ] - [1] Total time: 35.253s.
+2024-10-13 20:15:41 INFO [o.h.o.r.RoutingProfile                  ] - [1] Finished at: 2024-10-13 20:15:41.
+2024-10-13 20:15:41 INFO [o.h.o.r.RoutingProfileManager           ] - Total time: 35.322s.
+2024-10-13 20:15:41 INFO [o.h.o.r.RoutingProfileManager           ] - ========================================================================
+2024-10-13 20:15:41 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Recycling garbage...
+2024-10-13 20:15:41 INFO [o.h.o.r.RoutingProfileManager           ] - Before: Total - 1024 MB, Free - 814.00 MB, Max: 2 GB, Used - 210.00 MB
+2024-10-13 20:15:41 INFO [o.h.o.r.RoutingProfileManager           ] - After: Total - 1024 MB, Free - 949.35 MB, Max: 2 GB, Used - 74.65 MB
+2024-10-13 20:15:41 INFO [o.h.o.r.RoutingProfileManager           ] - ========================================================================
+2024-10-13 20:15:41 INFO [o.h.o.r.RoutingProfileManager           ] - ====> Memory usage by profiles:
+2024-10-13 20:15:41 INFO [o.h.o.r.RoutingProfileManager           ] - [1] 24.03 MB (32.2%)
+2024-10-13 20:15:41 INFO [o.h.o.r.RoutingProfileManager           ] - Total: 24.03 MB (32.2%)
+2024-10-13 20:15:41 INFO [o.h.o.r.RoutingProfileManager           ] - ========================================================================
+2024-10-13 20:19:36 INFO [o.h.o.a.s.l.ORSInitContextListener      ] - Shutting down openrouteservice {"build_date":"2024-03-21T13:55:54Z","version":"8.0.0"} and releasing resources.
