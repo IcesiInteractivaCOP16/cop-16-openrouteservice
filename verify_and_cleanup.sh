@@ -33,33 +33,33 @@ else
 fi
 
 # Stop all running containers
-if [ "$(docker ps -q)" ]; then
+if [ "$(sudo docker ps -q)" ]; then
   echo "Stopping all running containers..."
-  docker stop $(docker ps -q)
+  sudo docker stop $(sudo docker ps -q)
 else
   echo "No running containers."
 fi
 
 # Remove all containers
-if [ "$(docker ps -a -q)" ]; then
+if [ "$(sudo docker ps -a -q)" ]; then
   echo "Removing all containers..."
-  docker rm $(docker ps -a -q)
+  sudo docker rm $(sudo docker ps -a -q)
 else
   echo "No containers to remove."
 fi
 
 # Remove all images
-if [ "$(docker images -q)" ]; then
+if [ "$(sudo docker images -q)" ]; then
   echo "Removing all images..."
-  docker rmi -f $(docker images -q)
+  sudo docker rmi -f $(sudo docker images -q)
 else
   echo "No images to remove."
 fi
 
 # Remove all volumes
-if [ "$(docker volume ls -q)" ]; then
+if [ "$(sudo docker volume ls -q)" ]; then
   echo "Removing all volumes..."
-  docker volume rm $(docker volume ls -q)
+  sudo docker volume rm $(sudo docker volume ls -q)
 else
   echo "No volumes to remove."
 fi
