@@ -36,15 +36,22 @@ jobs:
         ssh -i $PEM_FILE $EC2_USER@$EC2_HOST "mkdir -p /home/$EC2_USER/app"
 
         # Copy files to EC2, including the script and docker-compose file
-        scp -i $PEM_FILE -r ./.github/workflows $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
         scp -i $PEM_FILE -r ./ors-docker $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
         scp -i $PEM_FILE -r ./docker-compose.yml $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
         scp -i $PEM_FILE -r ./verify_and_cleanup.sh $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
 
+
         # Connect and run the verification and cleanup script
         ssh -i $PEM_FILE $EC2_USER@$EC2_HOST << 'EOF'
+
+          APP_DIR="/home/${{ secrets.EC2_USER }}/app"
+          if [ ! -d "\$APP_DIR" ]; then
+            echo "App directory does not exist!"
+            exit 1
+          fi
+
           # Navigate to the app directory
-          cd /home/$EC2_USER/app || exit
+          cd "\$APP_DIR" || exit
 
           # Check if the script exists before attempting to run it
           if [ -f "verify_and_cleanup.sh" ]; then
