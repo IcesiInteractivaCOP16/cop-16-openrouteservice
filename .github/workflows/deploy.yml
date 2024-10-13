@@ -6,110 +6,63 @@ on:
       - main
 
 jobs:
-  setup:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-      - name: Create .ssh directory
-        run: mkdir -p ~/.ssh
+    - name: Set up SSH key
+      run: |
+        # Create the .ssh directory if it doesn't exist
+        mkdir -p ~/.ssh
+        
+        # Store the PEM key in a temporary file
+        echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/openrouteservice_pem.pem
+        chmod 600 ~/.ssh/openrouteservice_pem.pem
+    - name: Add SSH known hosts
+      run: ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Store PEM key
-        run: |
-          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/openrouteservice_pem.pem
-          chmod 600 ~/.ssh/openrouteservice_pem.pem
-
-      - name: Add SSH known hosts
-        run: ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
-
-  create_directory:
-    runs-on: ubuntu-latest
-    needs: setup  # Ensure setup is complete before creating the directory
-
-    steps:
-      - name: Create app directory on EC2
-        run: |
-          EC2_USER=${{ secrets.EC2_USER }}
-          EC2_HOST=${{ secrets.EC2_HOST }}
-          PEM_FILE=~/.ssh/openrouteservice_pem.pem
-          ssh -i $PEM_FILE $EC2_USER@$EC2_HOST "mkdir -p /home/$EC2_USER/app"
-
-  copy_files:
-    runs-on: ubuntu-latest
-    needs: create_directory  # Ensure directory creation is complete before copying files
-
-    steps:
-      - name: Copy ors-docker directory to EC2
-        run: |
-          EC2_USER=${{ secrets.EC2_USER }}
-          EC2_HOST=${{ secrets.EC2_HOST }}
-          PEM_FILE=~/.ssh/openrouteservice_pem.pem
-          scp -i $PEM_FILE -r ./ors-docker $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
-
-      - name: Copy docker-compose.yml to EC2
-        run: |
-          EC2_USER=${{ secrets.EC2_USER }}
-          EC2_HOST=${{ secrets.EC2_HOST }}
-          PEM_FILE=~/.ssh/openrouteservice_pem.pem
-          scp -i $PEM_FILE -r ./docker-compose.yml $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
-
-      - name: Copy verify_and_cleanup.sh to EC2
-        run: |
-          EC2_USER=${{ secrets.EC2_USER }}
-          EC2_HOST=${{ secrets.EC2_HOST }}
-          PEM_FILE=~/.ssh/openrouteservice_pem.pem
-          scp -i $PEM_FILE -r ./verify_and_cleanup.sh $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
-
-  run_script:
-    runs-on: ubuntu-latest
-    needs: copy_files  # Ensure files are copied before running the script
-
-    steps:
-      - name: Connect to EC2 and run verification and cleanup script
-        run: |
-          EC2_USER=${{ secrets.EC2_USER }}
-          EC2_HOST=${{ secrets.EC2_HOST }}
-          PEM_FILE=~/.ssh/openrouteservice_pem.pem
-          
-          ssh -i $PEM_FILE $EC2_USER@$EC2_HOST << 'EOF'
-            APP_DIR="/home/$EC2_USER/app"
-            
-            # Check if the app directory exists
-            if [ ! -d "$APP_DIR" ]; then
-              pwd
-              ls
-              echo "App directory does not exist!"
-              exit 1  # Exit if directory doesn't exist
-            fi
-
-            # Navigate to the app directory
-            cd $APP_DIR || exit
-
-            # Check if the verification script exists
-            if [ -f "verify_and_cleanup.sh" ]; then
-              chmod +x verify_and_cleanup.sh
-              echo "Running verification and cleanup script..."
-              ./verify_and_cleanup.sh
-            else
-              echo "Script verify_and_cleanup.sh not found!"
-              exit 1
-            fi
-
-            # Check if Docker is installed
-            if ! command -v docker &> /dev/null; then
-              echo "Docker is not installed."
-              exit 1
-            fi
-
-            # Check if Docker Compose is installed
-            if ! command -v docker-compose &> /dev/null; then
-              echo "Docker Compose is not installed."
-              exit 1
-            fi
-
-            # Run Docker Compose
-            echo "Starting Docker Compose..."
-            docker-compose up -d --build
-          EOF
+    - name: Copy files to EC2 and run verification and cleanup script
+      run: |
+        # Variables
+        EC2_USER=${{ secrets.EC2_USER }}  # Change if needed
+        EC2_HOST=${{ secrets.EC2_HOST }}  # EC2 IP or DNS
+        PEM_FILE=~/.ssh/openrouteservice_pem.pem  # Path to PEM file
+        # Create the app directory on the EC2 instance
+        ssh -i $PEM_FILE $EC2_USER@$EC2_HOST "mkdir -p /home/$EC2_USER/app"
+        # Copy files to EC2, including the script and docker-compose file
+        scp -i $PEM_FILE -r ./ors-docker $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
+        scp -i $PEM_FILE -r ./docker-compose.yml $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
+        scp -i $PEM_FILE -r ./verify_and_cleanup.sh $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
+        # Connect and run the verification and cleanup script
+        ssh -i $PEM_FILE $EC2_USER@$EC2_HOST << 'EOF'
+          APP_DIR="/home/ubuntu/app"
+          if [ ! -d "$APP_DIR" ]; then
+            pwd
+            ls
+            echo "App directory does not exist!"
+          fi
+          # Navigate to the app directory
+          cd $APP_DIR || exit
+          # Check if the script exists before attempting to run it
+          if [ -f "verify_and_cleanup.sh" ]; then
+            chmod +x verify_and_cleanup.sh
+            ./verify_and_cleanup.sh
+          else
+            echo "Script verify_and_cleanup.sh not found!"
+            exit 1
+          fi
+          # Check if Docker and Docker Compose are installed
+          if ! command -v docker &> /dev/null; then
+            echo "Docker is not installed."
+            exit 1
+          fi
+          if ! command -v docker-compose &> /dev/null; then
+            echo "Docker Compose is not installed."
+            exit 1
+          fi
+          # Run Docker Compose
+          docker-compose up -d --build
+        EOF
