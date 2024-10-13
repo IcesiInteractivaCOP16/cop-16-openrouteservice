@@ -35,8 +35,24 @@ jobs:
         # Copy files to EC2, including the script and docker-compose file
         # Check if the ors-docker directory exists and has content
         if ssh -i $PEM_FILE $EC2_USER@$EC2_HOST "[ -d /home/$EC2_USER/app/ors-docker ] && [ \"\$(ls -A /home/$EC2_USER/app/ors-docker)\" ]"; then
-          echo "ors-docker directory exists and is not empty. Skipping copy."
+          echo "ors-docker directory exists and is not empty. Checking for differences in osm_file."
+          # Check for differences in osm_file and update if necessary
+          LOCAL_OSM_FILE="./ors-docker/osm_file"
+          REMOTE_OSM_FILE="/home/$EC2_USER/app/ors-docker/osm_file"
+          if ssh -i $PEM_FILE $EC2_USER@$EC2_HOST "[ -f $REMOTE_OSM_FILE ]"; then
+            DIFF=$(ssh -i $PEM_FILE $EC2_USER@$EC2_HOST "diff $REMOTE_OSM_FILE <(cat $LOCAL_OSM_FILE)")
+            if [ -n "$DIFF" ]; then
+              echo "osm_file differs. Updating remote osm_file."
+              scp -i $PEM_FILE $LOCAL_OSM_FILE $EC2_USER@$EC2_HOST:$REMOTE_OSM_FILE
+            else
+              echo "osm_file is up to date."
+            fi
+          else
+            echo "osm_file does not exist on remote. Copying osm_file."
+            scp -i $PEM_FILE $LOCAL_OSM_FILE $EC2_USER@$EC2_HOST:$REMOTE_OSM_FILE
+          fi
         else
+          echo "ors-docker directory does not exist or is empty. Copying entire directory."
           scp -i $PEM_FILE -r ./ors-docker $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
         fi
 
