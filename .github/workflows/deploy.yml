@@ -21,7 +21,6 @@ jobs:
         # Store the PEM key in a temporary file
         echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/openrouteservice_pem.pem
         chmod 600 ~/.ssh/openrouteservice_pem.pem
-
     - name: Add SSH known hosts
       run: ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
 
@@ -31,11 +30,16 @@ jobs:
         EC2_USER=${{ secrets.EC2_USER }}  # Change if needed
         EC2_HOST=${{ secrets.EC2_HOST }}  # EC2 IP or DNS
         PEM_FILE=~/.ssh/openrouteservice_pem.pem  # Path to PEM file
+
         
         # Create the app directory on the EC2 instance
         ssh -i $PEM_FILE $EC2_USER@$EC2_HOST "mkdir -p /home/$EC2_USER/app"
 
-        # Function to copy files only if they exist
+
+        # Copy files to EC2, including the script and docker-compose file
+
+        ssh -i $PEM_FILE $EC2_USER@$EC2_HOST "if [ -d /home/$EC2_USER/app ]; then echo 'Directory exists'; else echo 'Directory creation failed'; exit 1; fi"
+
         copy_if_exists() {
           local src_file=$1
           local dest_dir=$2
@@ -52,19 +56,17 @@ jobs:
         copy_if_exists ./docker-compose.yml $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
         copy_if_exists ./verify_and_cleanup.sh $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
 
+
         # Connect and run the verification and cleanup script
         ssh -i $PEM_FILE $EC2_USER@$EC2_HOST << 'EOF'
-          APP_DIR="/home/$EC2_USER/app"  # Ensure this matches the EC2_USER variable
-          
-          # Check if the app directory exists
+          APP_DIR="/home/ubuntu/app"
           if [ ! -d "$APP_DIR" ]; then
+            pwd
+            ls
             echo "App directory does not exist!"
-            exit 1
           fi
-          
           # Navigate to the app directory
           cd $APP_DIR || exit
-          
           # Check if the script exists before attempting to run it
           if [ -f "verify_and_cleanup.sh" ]; then
             chmod +x verify_and_cleanup.sh
@@ -73,7 +75,6 @@ jobs:
             echo "Script verify_and_cleanup.sh not found!"
             exit 1
           fi
-          
           # Check if Docker and Docker Compose are installed
           if ! command -v docker &> /dev/null; then
             echo "Docker is not installed."
@@ -83,7 +84,6 @@ jobs:
             echo "Docker Compose is not installed."
             exit 1
           fi
-          
           # Run Docker Compose
           sudo docker-compose up -d
         EOF
