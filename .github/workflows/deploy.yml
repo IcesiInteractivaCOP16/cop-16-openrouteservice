@@ -32,6 +32,9 @@ jobs:
         EC2_HOST=${{ secrets.EC2_HOST }}  # EC2 IP or DNS
         PEM_FILE=~/.ssh/openrouteservice_pem.pem  # Path to PEM file
 
+        # Create the app directory on the EC2 instance
+        ssh -i $PEM_FILE $EC2_USER@$EC2_HOST "mkdir -p /home/$EC2_USER/app"
+
         # Copy files to EC2
         scp -i $PEM_FILE -r ./* $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
 
