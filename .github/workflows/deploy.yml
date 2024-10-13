@@ -1,0 +1,47 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up SSH key
+      run: |
+        # Create the .ssh directory if it doesn't exist
+        mkdir -p ~/.ssh
+        
+        # Store the PEM key in a temporary file
+        echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/openrouteservice_pem.pem
+        chmod 600 ~/.ssh/openrouteservice_pem.pem
+
+    - name: Add SSH known hosts
+      run: ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
+
+    - name: Copy files to EC2 and run verification and cleanup script
+      run: |
+        # Variables
+        EC2_USER=${{ secrets.EC2_USER }}  # Change if needed
+        EC2_HOST=${{ secrets.EC2_HOST }}  # EC2 IP or DNS
+        PEM_FILE=~/.ssh/openrouteservice_pem.pem  # Path to PEM file
+
+        # Create the app directory on the EC2 instance
+        ssh -i $PEM_FILE $EC2_USER@$EC2_HOST "mkdir -p /home/$EC2_USER/app"
+
+        # Copy files to EC2
+        scp -i $PEM_FILE -r ./* $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
+
+        # Connect and run the verification and cleanup script
+        ssh -i $PEM_FILE $EC2_USER@$EC2_HOST << 'EOF'
+          cd /home/$EC2_USER/app
+          chmod +x verify_and_cleanup.sh
+          ./verify_and_cleanup.sh
+          docker-compose up -d --build
+        EOF
