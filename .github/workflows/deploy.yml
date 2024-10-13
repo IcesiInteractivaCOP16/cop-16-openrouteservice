@@ -15,6 +15,9 @@ jobs:
 
     - name: Set up SSH key
       run: |
+        # Create the .ssh directory if it doesn't exist
+        mkdir -p ~/.ssh
+        
         # Store the PEM key in a temporary file
         echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/openrouteservice_pem.pem
         chmod 600 ~/.ssh/openrouteservice_pem.pem
@@ -26,7 +29,7 @@ jobs:
       run: |
         # Variables
         EC2_USER=${{ secrets.EC2_USER }}  # Change if needed
-        EC2_HOST= ${{ secrets.EC2_HOST }}  # EC2 IP or DNS
+        EC2_HOST=${{ secrets.EC2_HOST }}  # EC2 IP or DNS
         PEM_FILE=~/.ssh/openrouteservice_pem.pem  # Path to PEM file
 
         # Copy files to EC2
