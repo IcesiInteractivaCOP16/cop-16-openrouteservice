@@ -30,33 +30,19 @@ jobs:
         EC2_USER=${{ secrets.EC2_USER }}  # Change if needed
         EC2_HOST=${{ secrets.EC2_HOST }}  # EC2 IP or DNS
         PEM_FILE=~/.ssh/openrouteservice_pem.pem  # Path to PEM file
-
-        
         # Create the app directory on the EC2 instance
         ssh -i $PEM_FILE $EC2_USER@$EC2_HOST "mkdir -p /home/$EC2_USER/app"
-
-
         # Copy files to EC2, including the script and docker-compose file
+        # Check if the ors-docker directory exists and has content
+        if ssh -i $PEM_FILE $EC2_USER@$EC2_HOST "[ -d /home/$EC2_USER/app/ors-docker ] && [ \"\$(ls -A /home/$EC2_USER/app/ors-docker)\" ]"; then
+          echo "ors-docker directory exists and is not empty. Skipping copy."
+        else
+          scp -i $PEM_FILE -r ./ors-docker $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
+        fi
 
-        ssh -i $PEM_FILE $EC2_USER@$EC2_HOST "if [ -d /home/$EC2_USER/app ]; then echo 'Directory exists'; else echo 'Directory creation failed'; exit 1; fi"
-
-        copy_if_exists() {
-          local src_file=$1
-          local dest_dir=$2
-          if [ -e "$src_file" ]; then
-            echo "Copying: $src_file"
-            scp -i $PEM_FILE -r "$src_file" $EC2_USER@$EC2_HOST:"$dest_dir"
-          else
-            echo "File not found: $src_file"
-          fi
-        }
-
-        # Copy files to EC2, including the script and docker-compose file
-        copy_if_exists ./ors-docker $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
-        copy_if_exists ./docker-compose.yml $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
-        copy_if_exists ./verify_and_cleanup.sh $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
-
-
+        # Always copy docker-compose.yml and verify_and_cleanup.sh
+        scp -i $PEM_FILE -r ./docker-compose.yml $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
+        scp -i $PEM_FILE -r ./verify_and_cleanup.sh $EC2_USER@$EC2_HOST:/home/$EC2_USER/app/
         # Connect and run the verification and cleanup script
         ssh -i $PEM_FILE $EC2_USER@$EC2_HOST << 'EOF'
           APP_DIR="/home/ubuntu/app"
