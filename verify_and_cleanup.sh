@@ -1,17 +1,33 @@
 #!/bin/bash
 
+# Function to install Docker
+install_docker() {
+  echo "Installing Docker..."
+  sudo apt-get update
+  sudo apt-get install -y docker.io
+  sudo systemctl start docker
+  sudo systemctl enable docker
+}
+
+# Function to install Docker Compose
+install_docker_compose() {
+  echo "Installing Docker Compose..."
+  sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  sudo chmod +x /usr/local/bin/docker-compose
+}
+
 # Check if Docker is installed
 if ! [ -x "$(command -v docker)" ]; then
-  echo "Error: Docker is not installed." >&2
-  exit 1
+  echo "Docker is not installed. Attempting to install..."
+  install_docker
 else
   echo "Docker is installed."
 fi
 
 # Check if Docker Compose is installed
 if ! [ -x "$(command -v docker-compose)" ]; then
-  echo "Error: Docker Compose is not installed." >&2
-  exit 1
+  echo "Docker Compose is not installed. Attempting to install..."
+  install_docker_compose
 else
   echo "Docker Compose is installed."
 fi
